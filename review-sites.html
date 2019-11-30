@@ -7,14 +7,26 @@
 
   <!--  Load bootswatch-based Morea theme file. -->
   <link rel="stylesheet" href="styling/bootstrap.min.css">
-  <link rel="stylesheet" href="styling/style.css">
+  <link rel="stylesheet" href="./styling/style.css">
   <link rel="stylesheet" href="styling/syntax.css">
   <link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
 
   <!-- Load Bootstrap JavaScript components -->
   <script src="styling/jquery.min.js"></script>
   <script src="styling/bootstrap.min.js"></script>
-
+  <script>
+    $(document).ready(function(){
+      $("#btn").click(function() {
+        var value = $("#myInput").val().toLowerCase();
+        $("#filter section").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        $("#filter div").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 <!-- Responsive navbar -->
@@ -46,10 +58,20 @@
 
 
   <p>The following sites are made available for students wishing to review material from courses they have taken.  The materials at each site are taken from prior semesters; you may encounter new and different material if you are taking these courses now or in the future.</p>
-  <p>Click on the tiles below to go to the corresponding Review Site.</p>
-  <br>
-  <br>
+  <p>Type in keywords and click on a search button to filter specific classes.</p>
 
+
+
+  <div class="input-group" style="margin-top: 50px">
+    <input id="myInput" type="text" class="form-control" placeholder="Keyword Search" aria-label="Course Name or Type" aria-describedby="button-addon2">
+    <span class="input-group-btn">
+      <button id="btn" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+    </span>
+  </div>
+
+
+
+  <div id="filter">
     <section>
       <h2>Introductory Courses</h2>
       <hr>
@@ -57,8 +79,8 @@
 
         <div class="col-sm-3">
           <a href="http://uhmanoa.github.io/ReviewICS111/" class="thumbnail">
-            <h4 style="text-align: center; margin-bottom: 0px">ICS 101</h4>
-            <h3 style="text-align: center; margin-top: 5px">Digital Tools for the Information World</h3>
+              <h4 style="text-align: center; margin-bottom: 0px">ICS 101</h4>
+              <h3 style="text-align: center; margin-top: 5px">Digital Tools for the Information World</h3>
             <p>
               Fundamental information technology concepts and computing terminology, productivity software for problem solving, computer technology trends and impact on individuals and society. Emphasizes the utilization of operating systems and the production of professional documents, spreadsheets, etc. Pre: None
             </p>
@@ -110,8 +132,6 @@
 
       </div>
     </section>
-    <br>
-    <br>
 
     <section>
       <h2>Introduction to Programming</h2>
@@ -173,8 +193,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Discrete Mathematics</h2>
@@ -211,8 +231,8 @@
         </div>
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Algorithm</h2>
@@ -274,8 +294,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Probability, Statistics, and Queuing</h2>
@@ -292,8 +312,8 @@
         </div>
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Computation</h2>
@@ -354,8 +374,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Network Science</h2>
@@ -384,8 +404,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
   <section>
       <h2>Software Engineering</h2>
@@ -489,8 +509,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Operating Systems</h2>
@@ -519,8 +539,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Machine Learning</h2>
@@ -591,8 +611,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Artificial Intelligence</h2>
@@ -665,8 +685,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Database Systems</h2>
@@ -704,8 +724,8 @@
           </div>
         </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Computer Networks</h2>
@@ -743,8 +763,8 @@
 
         </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Computer Security</h2>
@@ -849,8 +869,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Computer Architecture</h2>
@@ -889,8 +909,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Concurrent and High Performance Programming</h2>
@@ -907,8 +927,8 @@
         </div>
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Human Computer Interaction</h2>
@@ -990,8 +1010,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Computer Graphics</h2>
@@ -1062,8 +1082,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Hypermedia</h2>
@@ -1102,8 +1122,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Bioinformatics</h2>
@@ -1152,8 +1172,8 @@
 
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Medical Informatics</h2>
@@ -1170,8 +1190,8 @@
         </div>
       </div>
     </section>
-    <br>
-    <br>
+
+
 
     <section>
       <h2>Other</h2>
@@ -1262,9 +1282,10 @@
 
       </div>
     </section>
-    <br>
-    <br>
 
+
+
+  </div>
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -1276,7 +1297,7 @@
 
 
 
-    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)
        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
 
   </div>
