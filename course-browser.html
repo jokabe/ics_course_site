@@ -222,11 +222,6 @@
 		  }
 		};
 		network = new vis.Network(container, data, options);
-		network.stabilize(0);
-		network.once('stabilized', function() {
-		    var scaleOption = { scale : 0.5 };
-		    network.moveTo(scaleOption);
-		})
 	</script>
 </div>
 
