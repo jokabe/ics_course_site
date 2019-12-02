@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Course Network | Courses.ICS </title>
+  <title> ICS Curriculum | Courses.ICS </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -15,7 +15,8 @@
   <!-- Load Bootstrap JavaScript components -->
   <script src="styling/jquery.min.js"></script>
   <script src="styling/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network/dist/vis-network.min.css" />
 </head>
 <body>
 <!-- Responsive navbar -->
@@ -41,29 +42,46 @@
   </div>
 </div>
 
-
-<script type="text/javascript" src="styling/vis.js"></script>
-<script type="text/javascript" src="styling/underscore.js"></script>
-<link href="styling/vis.css" rel="stylesheet" type="text/css" />
-
 <style type="text/css">
     #mynetwork {
       width: 100%;
       height: 800px;
       border: 0px solid lightgray;
+	  	background-color: #222222;
     }
 </style>
 
 <div class="container">
-  <h1 id="course-network-for-ics-degree-programs">Course network for ICS degree programs</h1>
+  <h1 id="course-network-for-ics-degree-programs">ICS Curriculum</h1>
 
-<p>The following graphic illustrates the general prerequisite structure for courses related to ICS degree programs.</p>
+  <p>The following diagram shows the ICS Curriculum for Bachelors and Masters degree.</p>
+  <p>For each degree program, the classes are organized based on prerequisites.</p>
 
-<p>Please consult the <a href="http://www.catalog.hawaii.edu/courses/departments/ics.htm">ICS Course Catalog</a> and the ICS academic plan document for details on the precise prerequisites for each course.  For example, in some cases the prerequisites are “any two 300-level courses”, or “either 314 or 361”. Such nuances are not illustrated below.</p>
+  <br>
 
-<p>Use your mouse to zoom in/out or pan around this diagram.</p>
+  <h4>Undergraduate ICS Curriculum</h4>
 
-</div>
+  <hr>
+
+  <div class="center-block" style="width: 50%">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="text-center"><h4>Course Requirements</h4></div>
+        <p>Total required semester hours of credit: 124 credits</p>
+        <ul>
+          <li>At least 60 must be in courses beyond the introductory level</li>
+          <li>At least 104 must be Colleges of Arts and Sciences courses</li>
+          <li>At least 30 credits must be earned at UHM</li>
+          <li>At least a 2.0 cumulative GPA</li>
+          <li>At least a C grade or higher in each major courses</li>
+          <li>At least a B grade or higher in ICS111 and ICS211</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="center-block" style="width: 50%">
+      <div class="text-center"><h4><u>Bachelor of Science in Computer Science</u></h4></div>
+  </div>
 
 
 <div id="mynetwork"></div>
@@ -71,181 +89,84 @@
 <script type="text/javascript">
 
   var courses = [
-    //{id: 101, level: 0, label: '101: Tools for the information age'},
-    //{id: 110, level: 0, label: '110: Intro to programming through 3D animations'},
-    {id: 111, level: 1, label: '111: Intro to CS I'},
-    {id: 141, level: 1, label: '141: Discrete mathematics for CS I'},
-    {id: 211, level: 3, label: '211: Intro to CS II'},
-    {id: 212, level: 5, label: '212: Program structure'},
-    {id: 215, level: 5, label: '215: Intro to scripting'},
-    {id: 241, level: 3, label: '241: Discrete mathematics for CS II'},
-    {id: 311, level: 5, label: '311: Algorithms'},
-    {id: 312, level: 7, label: '312: Machine level and systems programming'},
-    {id: 313, level: 7, label: '313: Programming language theory'},
-    {id: 314, level: 5, label: '314: Software engineering I'},
-    {id: 315, level: 7, label: '315: Web design and management'},
-    {id: 321, level: 5, label: '321: Data storage and retrieval'},
-    {id: 331, level: 7, label: '331: Logic design and microprocessors'},
-    {id: 332, level: 5, label: '332: Operating systems'},
-    {id: 355, level: 7, label: '355: Security and trust I'},
-    {id: 351, level: 5, label: '351: Network design and management'},
-    {id: 361, level: 7, label: '361: Intro to AI'},
-    {id: 414, level: 7, label: '414: Software engineering II'},
-    {id: 415, level: 7, label: '415: Intro to programming for the web'},
-    {id: 419, level: 7, label: '419: Science of design'},
-    {id: 421, level: 7, label: '421: Database systems'},
-    {id: 423, level: 7, label: '423: Computer security'},
-    {id: 425, level: 7, label: '425: Computer security and ethics'},
-    {id: 426, level: 7, label: '426: Computer systems security'},
-    {id: 431, level: 9, label: '431: Computer architecture'},
-    {id: 432, level: 7, label: '432: Concurrent programming'},
-    {id: 435, level: 7, label: '435: Machine learning'},
-    {id: 441, level: 7, label: '441: Theory of computation'},
-    {id: 442, level: 7, label: '442: Analytical models'},
-    {id: 443, level: 7, label: '443: Parallel Algorithms'},
-    {id: 451, level: 7, label: '451: Data networks'},
-    {id: 452, level: 9, label: '452: Robotics'},
-    {id: 455, level: 9, label: '455: Security and trust II'},
-    {id: 461, level: 7, label: '461: Artificial intelligence'},
-    {id: 462, level: 7, label: '462: AI for games'},
-    {id: 464, level: 7, label: '464: Human computer interaction'},
-    {id: 466, level: 7, label: '466: Design for mobile devices'},
-    {id: 469, level: 7, label: '469: Cognitive science'},
-    {id: 475, level: 7, label: '475: Bioinformatics I'},
-    {id: 476, level: 9, label: '476: Bioinformatics II'},
-    {id: 481, level: 7, label: '481: Intro to computer graphics'},
-    {id: 483, level: 7, label: '483: Computer vision'},
-    {id: 484, level: 7, label: '484: Data visualization'}
+    {id: 1, level: 1, label: 'ICS111, ICS141'},
+    {id: 2, level: 2, label: 'ICS211, ICS212, ICS241'},
+    {id: 3, level: 3, label: 'ICS312 or ICS331'},
+    {id: 4, level: 3, label: 'ICS311, ICS314, ICS321, ICS332'},
+    {id: 5, level: 3, label: 'ICS313 or ICS361'},
+    {id: 6, level: 4, label: 'Five 400-level ICS Courses'},
   ]
 
   var courselinks = [
-    {from: 111, to: 211},
-    {from: 211, to: 212},
-    {from: 211, to: 215},
-    {from: 141, to: 241},
-    {from: 211, to: 311},
-    {from: 241, to: 311},
-    {from: 212, to: 312},
-    {from: 212, to: 313},
-    {from: 241, to: 313},
-    {from: 211, to: 314},
-    {from: 215, to: 315},
-    {from: 211, to: 321},
-    {from: 212, to: 331},
-    {from: 211, to: 332},
-    {from: 241, to: 355},
-    {from: 141, to: 351},
-    {from: 211, to: 351},
-    {from: 241, to: 361},
-    {from: 212, to: 361},
-    {from: 215, to: 361},
-    {from: 314, to: 414},
-    {from: 311, to: 415},
-    {from: 311, to: 421},
-    {from: 321, to: 421},
-    {from: 311, to: 423},
-    {from: 312, to: 423},
-    {from: 351, to: 426},
-    {from: 331, to: 431},
-    {from: 212, to: 432},
-    {from: 311, to: 435},
-    {from: 311, to: 441},
-    {from: 311, to: 442},
-    {from: 311, to: 443},
-    {from: 212, to: 451},
-    {from: 311, to: 451},
-    {from: 312, to: 452},
-    {from: 313, to: 452},
-    {from: 355, to: 455},
-    {from: 311, to: 461},
-    {from: 212, to: 462},
-    {from: 314, to: 462},
-    {from: 361, to: 462},
-    {from: 311, to: 464},
-    {from: 311, to: 466},
-    {from: 311, to: 469},
-    {from: 311, to: 471},
-    {from: 311, to: 475},
-    {from: 475, to: 476},
-    {from: 311, to: 481},
-    {from: 212, to: 483},
-    {from: 311, to: 483}
+    {from: 1, to: 2},
+    {from: 2, to: 3},
+    {from: 2, to: 4},
+    {from: 2, to: 5},
+    {from: 3, to: 6},
+    {from: 4, to: 6},
+    {from: 5, to: 6},
   ]
-
-
-
-
-  var addModuleProperties = function(modules) {
-    _.each(modules,
-        function(module) {
-          module['id'] = getID();
-          module['shape'] = 'box';
-          module['label'] = module.course + ": " + module.module;
-          module['level'] = parseInt(module.course.substring(0, 2));
-        });
-    return modules;
-  };
-
-  var setModuleProperty = function(modules, property, propertyValue) {
-    _.each(modules,
-        function(module) {
-          module[property] = propertyValue;
-        });
-    return modules;
-  };
-
-  var addModuleColor = function(modules, color) {
-    _.each(modules,
-        function (module) {
-          module['color'] = color;
-        });
-    return modules;
-  }
-
-
-  /////////////////////////////////////////////////
-
-
-  // Add IDs and other standard properties to all modules.
-  setModuleProperty(courses, 'shape', 'box');
 
   var coursesDataSet = new vis.DataSet(courses);
   var courseLinksDataSet = new vis.DataSet(courselinks);
 
-  // create a network
+  
   var container = document.getElementById('mynetwork');
-
-  // provide the data in the vis format
+  
   var data = {
     nodes: coursesDataSet,
     edges: courseLinksDataSet
   };
 
   var options = {
-    edges: { arrows: 'to'},
-    layout: {hierarchical:{direction: "LR"}}};
-  //options = {};
+    nodes: {
+      shape: 'dot',
+      size: 20,
+      color : {
+        background: '#36d1dc'
+      },
+      font: {
+        size: 21,
+        color: '#ffffff'
+      },
+      borderWidth: 2
+    },
+    edges: {
+      arrows: 'to',
+      width: 2,
+      hightlight: '#000428'
+    },
+    layout:
+      {hierarchical:
+        {
+          direction: 'UD',
+          nodeSpacing: 10,
+          levelSeparation: 300,
+        }
+      },
+      physics: {
+        hierarchicalRepulsion: {
+          avoidOverlap: 1
+        }
+      }
+  };
 
-  // initialize your network!
+  
   var network = new vis.Network(container, data, options);
 </script>
 
+<h2>Graduate ICS Curriculum</h2>
+<hr>
 
-
-
+</div>
 
 <div class="footer-background">
-<footer>
-  <div class="container page-footer">
-
-
-
-
-    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
-       Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
-
-  </div>
-</footer>
+	<footer>
+  		<div class="container page-footer">
+			<p style="margin: 0">University of Hawaii at Manoa</p>
+			<p style="margin: 0">ICS 415 | Fall 2019</p>
+  		</div>
+	</footer>
 </div>
 </body>
 </html>
