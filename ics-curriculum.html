@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Course Network | Courses.ICS </title>
+  <title> ICS Curriculum | Courses.ICS </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -67,143 +67,152 @@
 <script type="text/javascript">
 
   var courses = [
-    //{id: 101, level: 0, label: '101: Tools for the information age'},
-    //{id: 110, level: 0, label: '110: Intro to programming through 3D animations'},
-    {id: 111, level: 1, label: '111: Intro to CS I'},
-    {id: 141, level: 1, label: '141: Discrete mathematics for CS I'},
-    {id: 211, level: 3, label: '211: Intro to CS II'},
-    {id: 212, level: 5, label: '212: Program structure'},
-    {id: 215, level: 5, label: '215: Intro to scripting'},
-    {id: 241, level: 3, label: '241: Discrete mathematics for CS II'},
-    {id: 311, level: 5, label: '311: Algorithms'},
-    {id: 312, level: 7, label: '312: Machine level and systems programming'},
-    {id: 313, level: 7, label: '313: Programming language theory'},
-    {id: 314, level: 5, label: '314: Software engineering I'},
-    {id: 315, level: 7, label: '315: Web design and management'},
-    {id: 321, level: 5, label: '321: Data storage and retrieval'},
-    {id: 331, level: 7, label: '331: Logic design and microprocessors'},
-    {id: 332, level: 5, label: '332: Operating systems'},
-    {id: 355, level: 7, label: '355: Security and trust I'},
-    {id: 351, level: 5, label: '351: Network design and management'},
-    {id: 361, level: 7, label: '361: Intro to AI'},
-    {id: 414, level: 7, label: '414: Software engineering II'},
-    {id: 415, level: 7, label: '415: Intro to programming for the web'},
-    {id: 419, level: 7, label: '419: Science of design'},
-    {id: 421, level: 7, label: '421: Database systems'},
-    {id: 423, level: 7, label: '423: Computer security'},
-    {id: 425, level: 7, label: '425: Computer security and ethics'},
-    {id: 426, level: 7, label: '426: Computer systems security'},
-    {id: 431, level: 9, label: '431: Computer architecture'},
-    {id: 432, level: 7, label: '432: Concurrent programming'},
-    {id: 435, level: 7, label: '435: Machine learning'},
-    {id: 441, level: 7, label: '441: Theory of computation'},
-    {id: 442, level: 7, label: '442: Analytical models'},
-    {id: 443, level: 7, label: '443: Parallel Algorithms'},
-    {id: 451, level: 7, label: '451: Data networks'},
-    {id: 452, level: 9, label: '452: Robotics'},
-    {id: 455, level: 9, label: '455: Security and trust II'},
-    {id: 461, level: 7, label: '461: Artificial intelligence'},
-    {id: 462, level: 7, label: '462: AI for games'},
-    {id: 464, level: 7, label: '464: Human computer interaction'},
-    {id: 466, level: 7, label: '466: Design for mobile devices'},
-    {id: 469, level: 7, label: '469: Cognitive science'},
-    {id: 475, level: 7, label: '475: Bioinformatics I'},
-    {id: 476, level: 9, label: '476: Bioinformatics II'},
-    {id: 481, level: 7, label: '481: Intro to computer graphics'},
-    {id: 483, level: 7, label: '483: Computer vision'},
-    {id: 484, level: 7, label: '484: Data visualization'}
+    {id: 101, level: 1, label: 'Digital Tools for the Information World'},
+    {id: 111, level: 1, label: 'Introduction to Computer Science I'},
+    {id: 141, level: 1, label: 'Discrete Mathematics for Computer Science I'},
+    {id: 211, level: 2, label: 'Introduction to Computer Science II'},
+    {id: 212, level: 2, label: 'Program Structure'},
+    {id: 215, level: 2, label: 'Introduction to Scripting'},
+    {id: 222, level: 2, label: 'Basic Concepts of Computer Science'},
+    {id: 241, level: 2, label: 'Discrete Mathematics for Computer Science II'},
+    {id: 311, level: 3, label: 'Algorithms'},
+    {id: 312, level: 4, label: 'Machine-Level and Systems Programming'},
+    {id: 313, level: 4, label: 'Programming Language Theory'},
+    {id: 314, level: 3, label: 'Software Engineering I'},
+    {id: 321, level: 4, label: 'Database Systems I'},
+    {id: 331, level: 4, label: 'Logic Design and Microprocessors'},
+    {id: 332, level: 4, label: 'Operating Systems'},
+    {id: 351, level: 4, label: 'Network Design and Management'},
+    {id: 355, level: 4, label: 'Security and Trust I: Resource Protections'},
+    {id: 361, level: 4, label: 'Introduction to Artificial Intelligence Programming'},
+    {id: 390, level: 4, label: 'Computing Ethics for Lab Assistants'},
+    {id: 414, level: 5, label: 'Software Engineering II'},
+    {id: 415, level: 5, label: 'Introduction to Programming for the Web'},
+    {id: 419, level: 5, label: 'The Science, Psychology and Philosophy of Systems Design'},
+    {id: 421, level: 5, label: 'Database Systems II'},
+    {id: 422, level: 5, label: 'Network Science Methodology'},
+    {id: 423, level: 5, label: 'Data Security and Cryptography I'},
+    {id: 424, level: 5, label: 'Application Frameworks'},
+    {id: 425, level: 5, label: 'Computer Security and Ethics'},
+    {id: 426, level: 5, label: 'Computer System Security'},
+    {id: 428, level: 5, label: 'Digital Forensics'},
+    {id: 431, level: 5, label: 'Computer Architecture'},
+    {id: 432, level: 5, label: 'Concurrent and High-Performance Programming'},
+    {id: 434, level: 5, label: 'Data Science Fundamentals'},
+    {id: 435, level: 5, label: 'Machine Learning Fundamentals'},
+    {id: 441, level: 5, label: 'Theory of Computation'},
+    {id: 442, level: 5, label: 'Analytical Models and Methods'},
+    {id: 443, level: 5, label: 'Parallel Algorithms'},
+    {id: 451, level: 5, label: 'Data Networks'},
+    {id: 455, level: 5, label: 'Security and Trust II: Information Assurance'},
+    {id: 461, level: 5, label: 'Artificial Intelligence'},
+    {id: 462, level: 5, label: 'Artificial Intelligence for Games'},
+    {id: 464, level: 5, label: 'Human Computer Interaction I'},
+    {id: 465, level: 5, label: 'Introduction to Hypermedia'},
+    {id: 466, level: 5, label: 'Design for Mobile Devices'},
+    {id: 469, level: 5, label: 'Cognitive Science'},
+    {id: 471, level: 5, label: 'Probability, Statistics, and Queuing'},
+    {id: 475, level: 5, label: 'Introduction to Bioinformatics Sequences and Genomes Analysis'},
+    {id: 476, level: 5, label: 'Bioinformatics Algorithms and Tool Development'},
+    {id: 481, level: 5, label: 'Introduction to Computer Graphics'},
+    {id: 483, level: 5, label: 'Computer Vision'},
+    {id: 484, level: 5, label: 'Data Visualization'},
   ]
 
   var courselinks = [
     {from: 111, to: 211},
+    {from: 141, to: 241},
     {from: 211, to: 212},
     {from: 211, to: 215},
-    {from: 141, to: 241},
+    {from: 141, to: 222},
     {from: 211, to: 311},
     {from: 241, to: 311},
     {from: 212, to: 312},
+    {from: 311, to: 312},
+    {from: 314, to: 312},
     {from: 212, to: 313},
-    {from: 241, to: 313},
+    {from: 311, to: 313},
+    {from: 314, to: 313},
     {from: 211, to: 314},
-    {from: 215, to: 315},
-    {from: 211, to: 321},
+    {from: 241, to: 314},
+    {from: 311, to: 321},
+    {from: 314, to: 321},
     {from: 212, to: 331},
-    {from: 211, to: 332},
-    {from: 241, to: 355},
-    {from: 141, to: 351},
-    {from: 211, to: 351},
-    {from: 241, to: 361},
+    {from: 311, to: 331},
+    {from: 314, to: 331},
+    {from: 311, to: 332},
+    {from: 314, to: 332},
+    {from: 311, to: 351},
+    {from: 314, to: 351},
+    {from: 222, to: 355},
+    {from: 311, to: 355},
+    {from: 314, to: 355},
     {from: 212, to: 361},
-    {from: 215, to: 361},
+    {from: 311, to: 361},
+    {from: 314, to: 361},
+    {from: 101, to: 390},
+    {from: 311, to: 414},
     {from: 314, to: 414},
     {from: 311, to: 415},
-    {from: 311, to: 421},
+    {from: 314, to: 415},
+    {from: 311, to: 419},
+    {from: 314, to: 419},
     {from: 321, to: 421},
-    {from: 311, to: 423},
-    {from: 312, to: 423},
-    {from: 351, to: 426},
+    {from: 311, to: 422},
+    {from: 355, to: 423},
+    {from: 311, to: 424},
+    {from: 314, to: 424},
+    {from: 355, to: 425},
+    {from: 355, to: 426},
+    {from: 355, to: 428},
     {from: 331, to: 431},
     {from: 212, to: 432},
+    {from: 311, to: 432},
+    {from: 314, to: 432},
+    {from: 211, to: 434},
     {from: 311, to: 435},
+    {from: 314, to: 435},
+    {from: 321, to: 438},
     {from: 311, to: 441},
+    {from: 314, to: 441},
     {from: 311, to: 442},
+    {from: 314, to: 442},
     {from: 311, to: 443},
+    {from: 314, to: 443},
+
     {from: 212, to: 451},
     {from: 311, to: 451},
-    {from: 312, to: 452},
-    {from: 313, to: 452},
+    {from: 314, to: 451},
+
     {from: 355, to: 455},
     {from: 311, to: 461},
     {from: 212, to: 462},
+    {from: 311, to: 462},
     {from: 314, to: 462},
-    {from: 361, to: 462},
     {from: 311, to: 464},
+    {from: 314, to: 464},
+
+    {from: 311, to: 465},
+    {from: 314, to: 465},
     {from: 311, to: 466},
+    {from: 314, to: 466},
     {from: 311, to: 469},
+    {from: 314, to: 469},
     {from: 311, to: 471},
+    {from: 314, to: 471},
+
     {from: 311, to: 475},
+    {from: 314, to: 475},
     {from: 475, to: 476},
     {from: 311, to: 481},
+    {from: 314, to: 481},
     {from: 212, to: 483},
-    {from: 311, to: 483}
+    {from: 311, to: 483},
+    {from: 314, to: 483},
+
+    {from: 311, to: 484},
+    {from: 314, to: 484},
   ]
-
-
-
-
-  var addModuleProperties = function(modules) {
-    _.each(modules,
-        function(module) {
-          module['id'] = getID();
-          module['shape'] = 'box';
-          module['label'] = module.course + ": " + module.module;
-          module['level'] = parseInt(module.course.substring(0, 2));
-        });
-    return modules;
-  };
-
-  var setModuleProperty = function(modules, property, propertyValue) {
-    _.each(modules,
-        function(module) {
-          module[property] = propertyValue;
-        });
-    return modules;
-  };
-
-  var addModuleColor = function(modules, color) {
-    _.each(modules,
-        function (module) {
-          module['color'] = color;
-        });
-    return modules;
-  }
-
-
-  /////////////////////////////////////////////////
-
-
-  // Add IDs and other standard properties to all modules.
-  setModuleProperty(courses, 'shape', 'box');
 
   var coursesDataSet = new vis.DataSet(courses);
   var courseLinksDataSet = new vis.DataSet(courselinks);
@@ -219,8 +228,20 @@
 
   var options = {
     edges: { arrows: 'to'},
-    layout: {hierarchical:{direction: "LR"}}};
-  //options = {};
+    layout:
+      {hierarchical:
+        {
+          direction: "LR",
+          nodeSpacing: 10,
+          levelSeparation: 300,
+        }
+      },
+      physics: {
+        hierarchicalRepulsion: {
+          avoidOverlap: 1
+        }
+      }
+  };
 
   // initialize your network!
   var network = new vis.Network(container, data, options);
