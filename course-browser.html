@@ -1,23 +1,25 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Module Browser | Courses.ICS </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
+  	<title> Course Relation Browser | Courses.ICS </title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
 
-  <!--  Load bootswatch-based Morea theme file. -->
-  <link rel="stylesheet" href="styling/bootstrap.min.css">
-  <link rel="stylesheet" href="styling/style.css">
-  <link rel="stylesheet" href="styling/syntax.css">
-  <link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
+  	<!--  Load bootswatch-based Morea theme file. -->
+  	<link rel="stylesheet" href="styling/bootstrap.min.css">
+  	<link rel="stylesheet" href="styling/style.css">
+  	<link rel="stylesheet" href="styling/syntax.css">
+  	<link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
 
-  <!-- Load Bootstrap JavaScript components -->
-  <script src="styling/jquery.min.js"></script>
-  <script src="styling/bootstrap.min.js"></script>
-
+  	<!-- Load Bootstrap JavaScript components -->
+  	<script src="styling/jquery.min.js"></script>
+  	<script src="styling/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network/dist/vis-network.min.css" />
 </head>
+
 <body>
+
 <!-- Responsive navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,148 +45,201 @@
 
 
 <div class="container">
-  <!-- Load visualization stuff -->
-<script type="text/javascript" src="styling/vis.js"></script>
-<script type="text/javascript" src="styling/underscore.js"></script>
-<script type="text/javascript" src="styling/palette.js"></script>
-<link href="styling/vis.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-    #mynetwork {
-      width: 100%;
-      height: 800px;
-      border: 1px solid lightgray;
-    }
-</style>
+	<style type="text/css">
+	    #mynetwork {
+	  		width: 100%;
+	  		height: 800px;
+	  		border: 1px solid #444444;
+	  		background-color: #222222;
+	  		margin: 1%;
+	    }
+	</style>
 
-<!-- Load course info -->
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS111/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS141/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS211/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS215/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS241/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS311/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS312/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS314/module-info.js"></script>
-<script type="text/javascript" src="//courses.ics.hawaii.edu/ReviewICS321/module-info.js"></script>
+	<div class="container">
+  		<h1 id="module-browser">Course Relation Browser</h1>
 
+		<p>The following visualization shows the relationships between each ICS course. Each color represents a different type computer science category.</p>
+	</div>
 
+	<div id="mynetwork"></div>
 
+	<script type="text/javascript">
+		var color = "gray";
+		var len = undefined;
 
-<div class="container">
-  <h1 id="module-browser">Module Browser</h1>
+		var nodes = [
+		  { id: 0, label: "101", group: 0 },
+		  { id: 1, label: "102", group: 0 },
+		  { id: 2, label: "110", group: 1 },
+		  { id: 3, label: "111", group: 1 },
+		  { id: 4, label: "141", group: 2 },
+		  { id: 5, label: "210", group: 0 },
+		  { id: 6, label: "211", group: 1 },
+		  { id: 7, label: "212", group: 1 },
+		  { id: 8, label: "215", group: 1 },
+		  { id: 9, label: "222", group: 0 },
+		  { id: 10, label: "235", group: 9 },
+		  { id: 11, label: "241", group: 2 },
+		  { id: 12, label: "290", group: 0 },
+		  { id: 13, label: "311", group: 3 },
+		  { id: 14, label: "312", group: 9 },
+		  { id: 15, label: "313", group: 10 },
+		  { id: 16, label: "314", group: 7 },
+		  { id: 17, label: "321", group: 11 },
+		  { id: 18, label: "331", group: 14 },
+		  { id: 19, label: "332", group: 8 },
+		  { id: 20, label: "351", group: 12 },
+		  { id: 21, label: "355", group: 13 },
+		  { id: 22, label: "361", group: 10 },
+		  { id: 23, label: "390", group: 20 },
+		  { id: 24, label: "414", group: 7 },
+		  { id: 25, label: "415", group: 7 },
+		  { id: 26, label: "419", group: 16 },
+		  { id: 27, label: "421", group: 11 },
+		  { id: 28, label: "422", group: 6 },
+		  { id: 29, label: "423", group: 13 },
+		  { id: 30, label: "424", group: 7 },
+		  { id: 31, label: "425", group: 13 },
+		  { id: 32, label: "426", group: 13 },
+		  { id: 33, label: "428", group: 13 },
+		  { id: 34, label: "431", group: 14 },
+		  { id: 35, label: "432", group: 15 },
+		  { id: 36, label: "434", group: 9 },
+		  { id: 37, label: "435", group: 9 },
+		  { id: 38, label: "441", group: 5 },
+		  { id: 39, label: "442", group: 2 },
+		  { id: 40, label: "443", group: 3 },
+		  { id: 41, label: "451", group: 12 },
+		  { id: 42, label: "452", group: 7 },
+		  { id: 43, label: "455", group: 13 },
+		  { id: 44, label: "461", group: 10 },
+		  { id: 45, label: "462", group: 10 },
+		  { id: 46, label: "464", group: 16 },
+		  { id: 47, label: "465", group: 18 },
+		  { id: 48, label: "466", group: 7 },
+		  { id: 49, label: "469", group: 16 },
+		  { id: 50, label: "471", group: 4 },
+		  { id: 51, label: "475", group: 19 },
+		  { id: 52, label: "476", group: 19 },
+		  { id: 53, label: "481", group: 17 },
+		  { id: 54, label: "483", group: 17 },
+		  { id: 55, label: "484", group: 17 },
+		  { id: 56, label: "485", group: 7 },
+		  { id: 57, label: "491", group: 20 },
+		  { id: 58, label: "495", group: 13 },
+		  { id: 59, label: "499", group: 20 }
+		];
+		var edges = [
+		  { from: 23, to: 57 },
+		  { from: 57, to: 59 },
+		  { from: 59, to: 23 },
 
-<p>The following visualization shows all of the modules in the <a href="review-sites.html">Review Sites</a>.</p>
+		  { from: 51, to: 52 },
+		  { from: 52, to: 51 },
 
-<p>Each module is linked to the preceding and next module in that course. Modules are also linked to prerequisite modules from other courses.</p>
+		  { from: 53, to: 54 },
+		  { from: 54, to: 55 },
+		  { from: 55, to: 53 },
 
-<p>This network graph takes several seconds to stabilize. Please use the mouse to drag the graph into the center of the window.</p>
+		  { from: 26, to: 46 },
+		  { from: 46, to: 49 },
+		  { from: 49, to: 26 },
 
-<p>You can use the mouse to zoom in, zoom out, and pan around the network.</p>
+		  { from: 18, to: 34 },
+		  { from: 34, to: 18 },
 
-<p>Hovering over a node will show a tooltip with the module description.</p>
+		  { from: 21, to: 29 },
+		  { from: 29, to: 31 },
+		  { from: 31, to: 32 },
+		  { from: 32, to: 33 },
+		  { from: 33, to: 43 },
+		  { from: 43, to: 58 },
+		  { from: 58, to: 21 },
 
-<p>Double-clicking a node is intended take you to the corresponding module page.  <em>Note:</em> sometimes you might need to single-click, then double-click, for this function to work.</p>
+		  { from: 20, to: 41 },
+		  { from: 41, to: 20 },
 
+		  { from: 17, to: 27 },
+		  { from: 27, to: 17 },
 
-</div>
+		  { from: 15, to: 22 },
+		  { from: 22, to: 44 },
+		  { from: 44, to: 45 },
+		  { from: 45, to: 15 },
 
+		  { from: 10, to: 14 },
+		  { from: 14, to: 36 },
+		  { from: 36, to: 37 },
+		  { from: 37, to: 10 },
 
-<div id="mynetwork"></div>
+		  { from: 16, to: 24 },
+		  { from: 24, to: 25 },
+		  { from: 25, to: 30 },
+		  { from: 30, to: 42 },
+		  { from: 42, to: 48 },
+		  { from: 48, to: 56 },
+		  { from: 56, to: 16 },
 
-<script type="text/javascript">
-  var numCourses = 9; // update this each time you add a new course.
-  var courseColors = palette('tol', numCourses);
-  var moduleNodes = [];
-  var moduleEdges = [];
+		  { from: 13, to: 40 },
+		  { from: 40, to: 13 },
 
-  var processCourse = function(course, nodes, edges, color) {
-    var numModules = course.modules.length;
-    // Define a node for each module, and chain the modules of a course together.
-    // Use a for loop so we can chain all but the last module to the next one.
-    for (i = 0; i < numModules; i++) {
-      var node = {};
-      var module = course.modules[i];
-      node.id = module.moduleUrl;
-      node.label = module.course + ": " + module.title;
-      node.color = '#' + color;
-      node.shape = 'box';
-      node.title = module.description;
-      nodes.push(node);
-      if (i < (numModules - 1)) {
-        var edge = {};
-        edge.from = module.moduleUrl;
-        edge.to = course.modules[i + 1].moduleUrl;
-        edges.push(edge);
-      }
-    }
-    // Define an edge for each prerequisite.
-    _.each(course.prerequisites,
-        function (prereq) {
-          var edge = {};
-          edge.from = prereq.moduleUrl;
-          edge.to = prereq.prerequisiteUrl;
-          edges.push(edge);
-        });
-  }
+		  { from: 4, to: 11 },
+		  { from: 11, to: 39 },
+		  { from: 39, to: 4 },
 
-  processCourse(ics111, moduleNodes, moduleEdges, courseColors[0]);
-  processCourse(ics141, moduleNodes, moduleEdges, courseColors[1]);
-  processCourse(ics211, moduleNodes, moduleEdges, courseColors[2]);
-  processCourse(ics215, moduleNodes, moduleEdges, courseColors[3]);
-  processCourse(ics241, moduleNodes, moduleEdges, courseColors[4]);
-  processCourse(ics311, moduleNodes, moduleEdges, courseColors[5]);
-  processCourse(ics312, moduleNodes, moduleEdges, courseColors[6]);
-  processCourse(ics314, moduleNodes, moduleEdges, courseColors[7]);
-  processCourse(ics321, moduleNodes, moduleEdges, courseColors[8]);
+		  { from: 2, to: 3 },
+		  { from: 3, to: 6 },
+		  { from: 6, to: 7 },
+		  { from: 7, to: 8 },
+		  { from: 8, to: 2 },
 
+		  { from: 0, to: 1 },
+		  { from: 1, to: 5 },
+		  { from: 5, to: 9 },
+		  { from: 9, to: 12 },
+		  { from: 12, to: 0 },
 
-  // create a network
-  var container = document.getElementById('mynetwork');
+		];
 
-  // provide the data in the vis format
-  var data = {
-    nodes: moduleNodes,
-    edges: moduleEdges
-  };
-
-  var options = {
-    // Layout is deterministic.
-    layout: { randomSeed: 2},
-    nodes: {
-      font: {
-        color: 'white'
-      }
-    },
-    physics: {stabilization: true}
-  };
-
-  // initialize your network!
-  var network = new vis.Network(container, data, options);
-
-  network.on("doubleClick", function (params) {
-    if (params['nodes'].length > 0) {
-      window.open(params['nodes'][0]);
-    }
-  });
-
-</script>
-
+		// create a network
+		var container = document.getElementById("mynetwork");
+		var data = {
+		  nodes: nodes,
+		  edges: edges
+		};
+		var options = {
+		  nodes: {
+		    shape: "dot",
+		    size: 30,
+		    font: {
+		      size: 32,
+		      color: "#ffffff"
+		    },
+		    borderWidth: 2
+		  },
+		  edges: {
+		    width: 2
+		  }
+		};
+		network = new vis.Network(container, data, options);
+		network.stabilize(0);
+		network.once('stabilized', function() {
+		    var scaleOption = { scale : 0.5 };
+		    network.moveTo(scaleOption);
+		})
+	</script>
 </div>
 
 
 
 <div class="footer-background">
-<footer>
-  <div class="container page-footer">
-
-
-
-
-    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
-       Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
-
-  </div>
-</footer>
+	<footer>
+  		<div class="container page-footer">
+			<p style="margin: 0">University of Hawaii at Manoa</p>
+			<p style="margin: 0">ICS 415 | Fall 2019</p>
+  		</div>
+	</footer>
 </div>
+
 </body>
 </html>
