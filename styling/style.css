@@ -4,3 +4,21 @@ section {
   text-align: center;
 }
 
+.col-sm-3 {
+
+
+}
+
+p {
+  /*width: 250px;*/
+  /*white-space: nowrap;*/
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
+}
+
+
+p.prereq {
+  font-weight: bold;
+  color: darkgreen;
+}
+
