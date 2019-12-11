@@ -1,6 +1,30 @@
 
+.navbar { margin : 0 !important; }
+
+.breadcrumb>.active {
+  color: #555555;
+}
+
 section {
   margin-top: 50px;
   text-align: center;
+}
+
+.col-sm-3 {
+
+
+}
+
+p {
+  /*width: 250px;*/
+  /*white-space: nowrap;*/
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
+}
+
+
+p.prereq {
+  font-weight: bold;
+  color: darkgreen;
 }
 
