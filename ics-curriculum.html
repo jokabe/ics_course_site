@@ -59,104 +59,117 @@
 
   <br>
 
-  <h4>Undergraduate ICS Curriculum</h4>
+  <div class="undergraduate">
+    <h4>Undergraduate ICS Curriculum</h4>
+    <hr>
 
-  <hr>
+    <div class="undergraduate-content">
 
-  <div class="center-block" style="width: 50%">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="text-center"><h4>Course Requirements</h4></div>
-        <p>Total required semester hours of credit: 124 credits</p>
-        <ul>
-          <li>At least 60 must be in courses beyond the introductory level</li>
-          <li>At least 104 must be Colleges of Arts and Sciences courses</li>
-          <li>At least 30 credits must be earned at UHM</li>
-          <li>At least a 2.0 cumulative GPA</li>
-          <li>At least a C grade or higher in each major courses</li>
-          <li>At least a B grade or higher in ICS111 and ICS211</li>
-        </ul>
+      <div class="center-block" style="width: 50%">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center"><h4>Course Requirements</h4></div>
+            <p>Total required semester hours of credit: 124 credits</p>
+            <ul>
+              <li>At least 60 must be in courses beyond the introductory level</li>
+              <li>At least 104 must be Colleges of Arts and Sciences courses</li>
+              <li>At least 30 credits must be earned at UHM</li>
+              <li>At least a 2.0 cumulative GPA</li>
+              <li>At least a C grade or higher in each major courses</li>
+              <li>At least a B grade or higher in ICS111 and ICS211</li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="center-block" style="width: 50%">
+          <div class="text-center"><h4><u>Bachelor of Science in Computer Science</u></h4></div>
+      </div>
+
+
+      <div id="mynetwork"></div>
+
+      <script type="text/javascript">
+
+        var courses = [
+          {id: 1, level: 1, label: 'ICS111, ICS141'},
+          {id: 2, level: 2, label: 'ICS211, ICS212, ICS241'},
+          {id: 3, level: 3, label: 'ICS312 or ICS331'},
+          {id: 4, level: 3, label: 'ICS311, ICS314, ICS321, ICS332'},
+          {id: 5, level: 3, label: 'ICS313 or ICS361'},
+          {id: 6, level: 4, label: 'Five 400-level ICS Courses'},
+        ]
+
+        var courselinks = [
+          {from: 1, to: 2},
+          {from: 2, to: 3},
+          {from: 2, to: 4},
+          {from: 2, to: 5},
+          {from: 3, to: 6},
+          {from: 4, to: 6},
+          {from: 5, to: 6},
+        ]
+
+        var coursesDataSet = new vis.DataSet(courses);
+        var courseLinksDataSet = new vis.DataSet(courselinks);
+
+
+        var container = document.getElementById('mynetwork');
+
+        var data = {
+          nodes: coursesDataSet,
+          edges: courseLinksDataSet
+        };
+
+        var options = {
+          nodes: {
+            shape: 'dot',
+            size: 20,
+            color : {
+              background: '#36d1dc'
+            },
+            font: {
+              size: 21,
+              color: '#ffffff'
+            },
+            borderWidth: 2
+          },
+          edges: {
+            arrows: 'to',
+            width: 2,
+            hightlight: '#000428'
+          },
+          layout:
+            {hierarchical:
+              {
+                direction: 'UD',
+                nodeSpacing: 10,
+                levelSeparation: 300,
+              }
+            },
+            physics: {
+              hierarchicalRepulsion: {
+                avoidOverlap: 1
+              }
+            }
+        };
+
+
+        var network = new vis.Network(container, data, options);
+      </script>
     </div>
   </div>
-  <div class="center-block" style="width: 50%">
-      <div class="text-center"><h4><u>Bachelor of Science in Computer Science</u></h4></div>
+
+
+  <div class="graduate">
+
+    <h2>Graduate ICS Curriculum</h2>
+    <hr>
+
+    <div class="graduate-content">
+
+    </div>
+
   </div>
-
-
-<div id="mynetwork"></div>
-
-<script type="text/javascript">
-
-  var courses = [
-    {id: 1, level: 1, label: 'ICS111, ICS141'},
-    {id: 2, level: 2, label: 'ICS211, ICS212, ICS241'},
-    {id: 3, level: 3, label: 'ICS312 or ICS331'},
-    {id: 4, level: 3, label: 'ICS311, ICS314, ICS321, ICS332'},
-    {id: 5, level: 3, label: 'ICS313 or ICS361'},
-    {id: 6, level: 4, label: 'Five 400-level ICS Courses'},
-  ]
-
-  var courselinks = [
-    {from: 1, to: 2},
-    {from: 2, to: 3},
-    {from: 2, to: 4},
-    {from: 2, to: 5},
-    {from: 3, to: 6},
-    {from: 4, to: 6},
-    {from: 5, to: 6},
-  ]
-
-  var coursesDataSet = new vis.DataSet(courses);
-  var courseLinksDataSet = new vis.DataSet(courselinks);
-
-  
-  var container = document.getElementById('mynetwork');
-  
-  var data = {
-    nodes: coursesDataSet,
-    edges: courseLinksDataSet
-  };
-
-  var options = {
-    nodes: {
-      shape: 'dot',
-      size: 20,
-      color : {
-        background: '#36d1dc'
-      },
-      font: {
-        size: 21,
-        color: '#ffffff'
-      },
-      borderWidth: 2
-    },
-    edges: {
-      arrows: 'to',
-      width: 2,
-      hightlight: '#000428'
-    },
-    layout:
-      {hierarchical:
-        {
-          direction: 'UD',
-          nodeSpacing: 10,
-          levelSeparation: 300,
-        }
-      },
-      physics: {
-        hierarchicalRepulsion: {
-          avoidOverlap: 1
-        }
-      }
-  };
-
-  
-  var network = new vis.Network(container, data, options);
-</script>
-
-<h2>Graduate ICS Curriculum</h2>
-<hr>
 
 </div>
 

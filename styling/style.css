@@ -1,8 +1,20 @@
 
-.navbar { margin : 0 !important; }
+.navbar {
+  background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
+  border-bottom: 1px solid #6ebfd4;
+}
 
 .breadcrumb>.active {
   color: #555555;
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: steelblue;
+}
+
+a {
+  color: steelblue;
 }
 
 section {
@@ -28,3 +40,14 @@ p.prereq {
   color: darkgreen;
 }
 
+.btn-primary {
+  color: #ffffff;
+  background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
+  background-color: #6ebfd4;
+  border-color: #6ebfd4;
+}
+
+.footer-background {
+  background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
+  border-bottom: 1px solid #6ebfd4;
+}
