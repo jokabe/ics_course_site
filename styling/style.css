@@ -1,4 +1,10 @@
 
+.navbar { margin : 0 !important; }
+
+.breadcrumb>.active {
+  color: #555555;
+}
+
 section {
   margin-top: 50px;
   text-align: center;
