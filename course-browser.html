@@ -210,16 +210,23 @@
 		var options = {
 		  nodes: {
 		    shape: "dot",
-		    size: 30,
+		    size: 35,
 		    font: {
-		      size: 32,
+		      size: 35,
 		      color: "#ffffff"
 		    },
 		    borderWidth: 2
 		  },
 		  edges: {
 		    width: 2
-		  }
+		  },
+      physics: {
+        hierarchicalRepulsion: {
+          avoidOverlap: 0.2,
+          nodeDistance: 400,
+          stabilization: true
+        }
+      }
 		};
 		network = new vis.Network(container, data, options);
 	</script>
