@@ -45,7 +45,7 @@
 <style type="text/css">
     #mynetwork {
       width: 100%;
-      height: 800px;
+      height: 500px;
       border: 0px solid lightgray;
 	  	background-color: #222222;
     }
@@ -92,21 +92,26 @@
 
         var courses = [
           {id: 1, level: 1, label: 'ICS111, ICS141'},
-          {id: 2, level: 2, label: 'ICS211, ICS212, ICS241'},
-          {id: 3, level: 3, label: 'ICS312 or ICS331'},
-          {id: 4, level: 3, label: 'ICS311, ICS314, ICS321, ICS332'},
-          {id: 5, level: 3, label: 'ICS313 or ICS361'},
-          {id: 6, level: 4, label: 'Five 400-level ICS Courses'},
+          {id: 2, level: 2, label: 'ICS211, ICS241'},
+          {id: 3, level: 3, label: 'ICS212, ICS311, ICS314'},
+          {id: 4, level: 4, label: 'ICS312, ICS313, ICS321, ICS332'},
+          {id: 5, level: 4, label: 'ICS312, ICS361, ICS321, ICS332'},
+          {id: 6, level: 4, label: 'ICS331, ICS313, ICS321, ICS332'},
+          {id: 7, level: 4, label: 'ICS331, ICS361, ICS321, ICS332'},
+          {id: 8, level: 5, label: 'Five 400-level ICS Courses'},
         ]
 
         var courselinks = [
           {from: 1, to: 2},
           {from: 2, to: 3},
-          {from: 2, to: 4},
-          {from: 2, to: 5},
+          {from: 3, to: 4},
+          {from: 3, to: 5},
           {from: 3, to: 6},
-          {from: 4, to: 6},
-          {from: 5, to: 6},
+          {from: 3, to: 7},
+          {from: 4, to: 8},
+          {from: 5, to: 8},
+          {from: 6, to: 8},
+          {from: 7, to: 8},
         ]
 
         var coursesDataSet = new vis.DataSet(courses);
@@ -123,12 +128,12 @@
         var options = {
           nodes: {
             shape: 'dot',
-            size: 20,
+            size: 25,
             color : {
               background: '#36d1dc'
             },
             font: {
-              size: 21,
+              size: 22,
               color: '#ffffff'
             },
             borderWidth: 2
@@ -142,13 +147,15 @@
             {hierarchical:
               {
                 direction: 'UD',
-                nodeSpacing: 10,
+                nodeSpacing: 20,
                 levelSeparation: 300,
               }
             },
             physics: {
               hierarchicalRepulsion: {
-                avoidOverlap: 1
+                // avoidOverlap: 1,
+                nodeDistance: 400,
+                stabilization: true
               }
             }
         };
