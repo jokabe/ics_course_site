@@ -65,7 +65,8 @@ const options2 = {
         shape: 'dot',
         size: 25,
         color : {
-            background: '#36d1dc'
+            background: '#36dc4f',
+            border: '#1a702a',
         },
         font: {
           size: 22,
@@ -78,7 +79,7 @@ const options2 = {
     edges: {
         arrows: 'to',
         width: 2,
-        hightlight: '#000428'
+        hightlight: '#002801'
     },
 
     // setup the orientation of the graph
