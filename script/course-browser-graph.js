@@ -32,7 +32,7 @@ var nodes = [
   { id: 25, label: "415", group: 7 },
   { id: 26, label: "419", group: 16 },
   { id: 27, label: "421", group: 11 },
-  { id: 28, label: "422", group: 6 },
+  { id: 28, label: "422", group: 2 },
   { id: 29, label: "423", group: 13 },
   { id: 30, label: "424", group: 7 },
   { id: 31, label: "425", group: 13 },
@@ -54,7 +54,7 @@ var nodes = [
   { id: 47, label: "465", group: 18 },
   { id: 48, label: "466", group: 7 },
   { id: 49, label: "469", group: 16 },
-  { id: 50, label: "471", group: 4 },
+  { id: 50, label: "471", group: 2 },
   { id: 51, label: "475", group: 19 },
   { id: 52, label: "476", group: 19 },
   { id: 53, label: "481", group: 17 },
@@ -123,7 +123,8 @@ var edges = [
 
   { from: 4, to: 11 },
   { from: 11, to: 39 },
-  { from: 39, to: 4 },
+  { from: 39, to: 50 },
+  { from: 50, to: 4 },
 
   { from: 2, to: 3 },
   { from: 3, to: 6 },
