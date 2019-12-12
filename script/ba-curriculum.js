@@ -3,10 +3,10 @@
  */
 
 // graph nodes
-const courses1 = [
+const courses2 = [
     {id: 1, level: 1, label: 'ICS111, ICS141'},
-    {id: 2, level: 2, label: 'ICS211, ICS241'},
-    {id: 3, level: 3, label: 'ICS212, ICS311, ICS314'},
+    {id: 2, level: 2, label: 'ICS211, ICS222, ICS241'},
+    {id: 3, level: 3, label: 'ICS212, ICS311, ICS314, ICS355'},
     {id: 4, level: 4, label: 'ICS312, ICS313, ICS351, ICS321, ICS332'},
     {id: 5, level: 4, label: 'ICS312, ICS313, ICS451, ICS321, ICS332'},
     {id: 6, level: 4, label: 'ICS312, ICS361, ICS351, ICS321, ICS332'},
@@ -15,11 +15,12 @@ const courses1 = [
     {id: 9, level: 4, label: 'ICS331, ICS313, ICS451, ICS321, ICS332'},
     {id: 10, level: 4, label: 'ICS331, ICS361, ICS351, ICS321, ICS332'},
     {id: 11, level: 4, label: 'ICS331, ICS361, ICS451, ICS321, ICS332'},
-    {id: 12, level: 5, label: 'Five 400-level ICS Courses'},
+    {id: 12, level: 5, label: 'One 400-level ICS Course'},
+    {id: 13, level: 5, label: 'Four 300-level Courses'},
 ]
 
 // graph edges
-const courselinks1 = [
+const courselinks2 = [
     {from: 1, to: 2},
     {from: 2, to: 3},
     {from: 3, to: 4},
@@ -38,19 +39,27 @@ const courselinks1 = [
     {from: 9, to: 12},
     {from: 10, to: 12},
     {from: 11, to: 12},
+    {from: 4, to: 13},
+    {from: 5, to: 13},
+    {from: 6, to: 13},
+    {from: 7, to: 13},
+    {from: 8, to: 13},
+    {from: 9, to: 13},
+    {from: 10, to: 13},
+    {from: 11, to: 13},
 ]
 
-// place the graph at div with "bachelor-science-network" id
-const container1 = document.getElementById('bachelor-science-network');
+// place the graph at div with "bachelor-arts-network" id
+const container2 = document.getElementById('bachelor-arts-network');
 
 // set up graph object
-const data1 = {
-    nodes: new vis.DataSet(courses1),
-    edges: new vis.DataSet(courselinks1)
+const data2 = {
+    nodes: new vis.DataSet(courses2),
+    edges: new vis.DataSet(courselinks2)
 };
 
 // customize graph object
-const options1 = {
+const options2 = {
     // node customization
     nodes: {
         shape: 'dot',
@@ -77,7 +86,7 @@ const options1 = {
         hierarchical: {
             direction: 'LR',
             nodeSpacing: 20,
-            levelSeparation: 400,
+            levelSeparation: 450,
         }
     },
 
@@ -91,4 +100,4 @@ const options1 = {
 };
 
 // create the graph network
-const network1 = new vis.Network(container1, data1, options1);
+const network2 = new vis.Network(container2, data2, options2);
