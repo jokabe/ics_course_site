@@ -1,199 +1,154 @@
-
+<!-- 
+  - Used http://courses.ics.hawaii.edu/course-network/ as the HTML template
+  - HTML code was changed and updated by Jun Okabe
+ -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title> ICS Curriculum | Courses.ICS </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
+    <title> ICS Curriculum | Courses.ICS </title>
+    <meta charset="utf-8">
 
-  <!--  Load bootswatch-based Morea theme file. -->
-  <link rel="stylesheet" href="styling/bootstrap.min.css">
-  <link rel="stylesheet" href="styling/style.css">
-  <link rel="stylesheet" href="styling/syntax.css">
-  <link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styling/bootstrap.min.css">
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
 
-  <!-- Load Bootstrap JavaScript components -->
-  <script src="styling/jquery.min.js"></script>
-  <script src="styling/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network/dist/vis-network.min.css" />
+    <script src="styling/jquery.min.js"></script>
+    <script src="styling/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-network/dist/vis-network.min.css" />
 </head>
 <body>
-<!-- Responsive navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <!--  Display three horizontal lines when navbar collapsed. -->
-        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"> Courses.ICS </a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="review-sites.html">Review Sites</a></li>
-        <li><a href="ics-curriculum.html">ICS Curriculum</a></li>
-        <li><a href="course-browser.html">Course Relation Browser</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="suggestion-box.html">Suggestion Box</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-<style type="text/css">
-    #bachelor-science-network {
-      width: 100%;
-      height: 500px;
-      border: 0px solid lightgray;
-	  	background-color: #222222;
-    }
-</style>
+<!-- Navigation Bar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <!--  Display three horizontal lines when navbar collapsed. -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> Courses.ICS </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="review-sites.html">Review Sites</a></li>
+                <li><a href="ics-curriculum.html">ICS Curriculum</a></li>
+                <li><a href="course-browser.html">Course Relation Browser</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="suggestion-box.html">Suggestion Box</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <div class="container">
-  <h1 id="course-network-for-ics-degree-programs">ICS Curriculum</h1>
+    <h1 id="course-network-for-ics-degree-programs">ICS Curriculum</h1>
 
-  <p>The following diagram shows the ICS Curriculum for Bachelors and Masters degree.</p>
-  <p>For each degree program, the classes are organized based on prerequisites.</p>
+    <p>The following diagram shows the ICS Curriculum for Bachelors and Masters degree.</p>
+    <p>For each degree program, the classes are organized based on prerequisites.</p>
 
-  <br>
+    <br>
 
-  <div class="undergraduate">
-    <h4>Undergraduate ICS Curriculum</h4>
-    <hr>
+    <div class="undergraduate">
+        <h4>Undergraduate ICS Curriculum</h4>
+        <hr>
 
-    <div class="undergraduate-content">
+        <div class="undergraduate-content">
 
-      <div class="center-block" style="width: 50%">
-          <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="text-center"><h4>Course Requirements</h4></div>
-                        <p>Total required semester hours of credit: 124 credits</p>
-                        <ul>
-                            <li>At least 60 must be in courses beyond the introductory level</li>
-                            <li>At least 104 must be Colleges of Arts and Sciences courses</li>
-                            <li>At least 30 credits must be earned at UHM</li>
-                            <li>At least a 2.0 cumulative GPA</li>
-                            <li>At least a C grade or higher in each major courses</li>
-                            <li>At least a B grade or higher in ICS111 and ICS211</li>
-                        </ul>
-                    </div>
-                </div>
-          </div>
+            <div class="center-block" style="width: 50%">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div class="text-center">
+                              <h4>Degree Requirements</h4>
+                          </div>
+                          <p>Total required semester hours of credit: 124 credits</p>
+                          <ul>
+                              <li>At least 60 must be in courses beyond the introductory level</li>
+                              <li>At least 104 must be Colleges of Arts and Sciences courses</li>
+                              <li>At least 30 credits must be earned at UHM</li>
+                              <li>At least a 2.0 cumulative GPA</li>
+                              <li>At least a C grade or higher in each major courses</li>
+                              <li>At least a B grade or higher in ICS111 and ICS211</li>
+                          </ul>
+                      </div>
+                  </div>
+            </div>
 
-          <div class="center-block" style="width: 50%">
-              <div class="text-center"><h4><u>Bachelor of Science in Computer Science</u></h4></div>
-          </div>
+            <div class="center-block" style="width: 50%">
+                <div class="text-center"><h4><u>Bachelor of Arts in Computer Science</u></h4></div>
+            </div>
 
-          <div id="bachelor-science-network"></div>
+            <div id="bachelor-arts-network"></div>
+            <script type="text/javascript" src="script/ba-curriculum.js"></script>
 
-      <script type="text/javascript">
+            <div class="center-block" style="width: 50%">
+                <div class="text-center"><h4><u>Bachelor of Science in Computer Science</u></h4></div>
+            </div>
 
-          // graph nodes
-          const courses = [
-              {id: 1, level: 1, label: 'ICS111, ICS141'},
-              {id: 2, level: 2, label: 'ICS211, ICS241'},
-              {id: 3, level: 3, label: 'ICS212, ICS311, ICS314'},
-              {id: 4, level: 4, label: 'ICS312, ICS313, ICS321, ICS332'},
-              {id: 5, level: 4, label: 'ICS312, ICS361, ICS321, ICS332'},
-              {id: 6, level: 4, label: 'ICS331, ICS313, ICS321, ICS332'},
-              {id: 7, level: 4, label: 'ICS331, ICS361, ICS321, ICS332'},
-              {id: 8, level: 5, label: 'Five 400-level ICS Courses'},
-          ]
+            <div id="bachelor-science-network"></div>
+            <script type="text/javascript" src="script/bs-curriculum.js"></script>
 
-          // graph edges
-          const courselinks = [
-              {from: 1, to: 2},
-              {from: 2, to: 3},
-              {from: 3, to: 4},
-              {from: 3, to: 5},
-              {from: 3, to: 6},
-              {from: 3, to: 7},
-              {from: 4, to: 8},
-              {from: 5, to: 8},
-              {from: 6, to: 8},
-              {from: 7, to: 8},
-          ]
-
-          // place the graph at div with "bachelor-science-network" id
-          const container = document.getElementById('bachelor-science-network');
-
-          // set up graph object
-          const data = {
-              nodes: new vis.DataSet(courses),
-              edges: new vis.DataSet(courselinks)
-          };
-          
-          // customize graph object
-          const options = {
-              // node customization
-              nodes: {
-                  shape: 'dot',
-                  size: 25,
-                  color : {
-                      background: '#36d1dc'
-                  },
-                  font: {
-                    size: 22,
-                    color: '#ffffff'
-                  },
-                  borderWidth: 2
-              },
-
-              // edge customization
-              edges: {
-                  arrows: 'to',
-                  width: 2,
-                  hightlight: '#000428'
-              },
-
-              // setup the orientation of the graph
-              layout: {
-                  hierarchical: {
-                      direction: 'LR',
-                      nodeSpacing: 20,
-                      levelSeparation: 300,
-                  }
-              },
-
-              // other graph customization (Ex. graph movement, etc.)
-              physics: {
-                  hierarchicalRepulsion: {
-                      nodeDistance: 200, // distance between each node
-                      stabilization: true // stabilize on load
-                  }
-              }
-          };
-
-          // create the graph network
-          const network = new vis.Network(container, data, options);
-
-      </script>
-    </div>
-  </div>
-
-
-  <div class="graduate">
-
-    <h2>Graduate ICS Curriculum</h2>
-    <hr>
-
-    <div class="graduate-content">
-
+        </div>
     </div>
 
-  </div>
+    <br>
 
+    <div class="graduate">
+
+        <h4>Graduate ICS Curriculum</h4>
+        <hr>
+
+        <div class="graduate-content">
+
+            <p>Plan A (thesis) and Plan B (non-thesis) are available. A minimum of 31 credit hours is required under both plans. A minimum B average must be maintained in all courses.</p>
+
+            <div class="center-block" style="width: 90%">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div class="text-center">
+                              <h4>Plan A (Thesis)</h4>
+                          </div>
+                          <ul>
+                              <li>At least six ICS graduate courses, i.e. courses with numbers between ICS 600 and ICS 692, with the exception of ICS 690. At least one course must be taken from each of four areas of concentration in the program to ensure breadth of knowledge. 3 credits of ICS 700 may be substituted for one of these six courses</li>
+                              <li>Two additional elective 600-level courses must be taken either from the ICS department or some related discipline (such as LIS, EE, MIS, etc.) on a topic related to computer science. Elective courses must have prior approval from the ICS graduate chair as to the suitability prior to enrollment in the courses</li>
+                              <li>Up to two of the graduate courses may be replaced by regular ICS 400-level courses (not ICS 499), taken after enrolling in the ICS graduate program. ICS 400-level courses do not count towards the area requirement with the exception of ICS 423</li>
+                              <li>Thesis research taken as 6 credits of ICS 700 is required for the degree. These credits are typically taken close to or during the final semester in the program (an additional 3 credits of ICS 700 may be taken as a replacement for one of the two additional elective 600-level courses described in point 2 above)</li>
+                              <li>ICS 690 (taken for CR/NC) for one semester</li>
+                          </ul>
+                      </div>
+                  </div>
+            </div>
+
+            <div class="center-block" style="width: 90%">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div class="text-center">
+                              <h4>Plan B (Non-Thesis)</h4>
+                          </div>
+                          <ul>
+                              <li>At least six ICS graduate courses, i.e. courses with numbers between ICS 600 and ICS 691, with the exception of ICS 690. At least one course must be taken from each of four areas of concentration in the program to ensure breadth of knowledge</li>
+                              <li>Two additional elective 600-level courses must be taken either from the ICS department or some related discipline (such as LIS, EE, MIS, etc.) on a topic related to computer science. Elective courses must have prior approval from the ICS graduate chair as to the suitability prior to enrollment in the courses</li>
+                              <li>Up to two of the graduate courses may be replaced by regular ICS 400-level courses (not ICS 499), taken after enrolling in the ICS graduate program. ICS 400-level courses do not count towards the area requirement with the exception of ICS 423</li>
+                              <li>A final project ending with a required written report, taken as ICS 699 (a maximum of six credits is counted toward the degree) under the supervision of a faculty member</li>
+                              <li>ICS 690 (taken for CR/NC) for one semester</li>
+                          </ul>
+                      </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
+<!-- Footer Section -->
 <div class="footer-background">
-	<footer>
-  		<div class="container page-footer">
-			<p style="margin: 0">University of Hawaii at Manoa</p>
-			<p style="margin: 0">ICS 415 | Fall 2019</p>
-  		</div>
-	</footer>
+    <footer>
+        <div class="container page-footer">
+            <p style="margin: 0">University of Hawaii at Manoa</p>
+            <p style="margin: 0">ICS 415 | Fall 2019</p>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
