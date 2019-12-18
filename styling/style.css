@@ -96,6 +96,11 @@ p.prereq {
   }
 }
 
+.row-no-flex {
+  display: inline;
+  !important
+}
+
 /* For the panel header color in the index.html page */
 .success-header {
   color: #28a745;
@@ -106,11 +111,6 @@ p.prereq {
 .warning-header {
   color: #ff6707;
   !important
-}
-
-.footer-background {
-    background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
-    border-bottom: 1px solid #6ebfd4;
 }
 
 .video {
