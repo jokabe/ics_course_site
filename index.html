@@ -1,94 +1,96 @@
+<!--
+  - Used http://courses.ics.hawaii.edu/ as the HTML template
+  - HTML code was changed and updated by Jun Okabe
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
   <title> Home | Courses.ICS </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
-  <!--  Load bootswatch-based Morea theme file. -->
   <link rel="stylesheet" href="styling/bootstrap.min.css">
   <link rel="stylesheet" href="styling/style.css">
-  <link rel="stylesheet" href="styling/syntax.css">
   <link rel="shortcut icon" href="styling/favicon.ico" type="image/x-icon" />
 
-  <!-- Load Bootstrap JavaScript components -->
   <script src="styling/jquery.min.js"></script>
   <script src="styling/bootstrap.min.js"></script>
 
 </head>
 <body>
-<!-- Navigation Bar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Navigation Bar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <!--  Display three horizontal lines when navbar collapsed. -->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"> Courses.ICS </a>
+          </div>
+          <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="review-sites.html">Review Sites</a></li>
+                  <li><a href="ics-curriculum.html">ICS Curriculum</a></li>
+                  <li><a href="course-browser.html">Course Relation Browser</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="suggestion-box.html">Suggestion Box</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+<div class="jumbotron">
     <div class="container">
-        <div class="navbar-header">
-            <!--  Display three horizontal lines when navbar collapsed. -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"> Courses.ICS </a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="review-sites.html">Review Sites</a></li>
-                <li><a href="ics-curriculum.html">ICS Curriculum</a></li>
-                <li><a href="course-browser.html">Course Relation Browser</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="suggestion-box.html">Suggestion Box</a></li>
-            </ul>
-        </div>
+        <h1>Courses.ICS</h1>
+        <hr>
+        <p> For <a href="http://www.ics.hawaii.edu">Department of Information and Computer Sciences</a> students, faculty, and interested visitors.</p>
     </div>
 </div>
 
+<div class="album py-5 bg-light">
+  <div class="container">
 
-<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-title text-center"><h3>Review Sites</h3></div>
+            <div class="panel-body">
+                <p class="panel-text"> Learn or refresh your understanding of ICS course using the provided study material.</p>
+            </div>
+            <div class="panel-footer text-center">
+                <a class="btn btn-info" href="review-sites.html" role="button">View Course Materials</a>
+            </div>
+          </div>
+      </div>
 
-<h1 id="coursesics">Courses.ICS</h1>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-title text-center"><h3 class="success-header"><div>ICS Curriculum</div></h3></div>
+            <div class="panel-body">
+                <p class="panel-text"> A graphical representation of the ICS curriculum for the Undergraduate and Graduate level.</p>
+            </div>
+            <div class="panel-footer text-center">
+                <a class="btn btn-green" href="ics-curriculum.html" role="button">View Curriculum</a>
+            </div>
+          </div>
+      </div>
 
-<p>Welcome to Courses.ICS, a service of the <a href="http://www.ics.hawaii.edu">Department of Information and Computer Sciences</a> at the <a href="http://manoa.hawaii.edu">University of Hawaii at Manoa</a>.</p>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-title text-center"><h3><div class="warning-header">Course Relation</div></h3></div>
+            <div class="panel-body">
+                <p class="panel-text"> A graphical representation of relationships between ICS courses.</p>
+            </div>
+            <div class="panel-footer text-center">
+                <a class="btn btn-warning" href="course-browser.html" role="button">View Course Relation</a>
+            </div>
+          </div>
+      </div>
 
-<h3 id="purpose">Purpose</h3>
-
-<p>This site supports:</p>
-
-<ul>
-  <li>
-    <p>Students who wish to refresh their understanding of material they learned in previous courses.</p>
-  </li>
-  <li>
-    <p>Faculty who wish to provide links to material from prerequisite courses for which they will assume student familiarity.</p>
-  </li>
-  <li>
-    <p>Students and faculty who wish to refer to Undergraduate/Graduate ICS curriculum</p>
-  </li>
-  <li>
-    <p>Students and faculty who come across new online resources for curriculum material and wish to share it with others.</p>
-  </li>
-</ul>
-
-<h3 id="contents">Contents</h3>
-
-<p>This site contains:</p>
-
-<ul>
-  <li>
-    <p><a href="review-sites.html">Review Sites</a> provides links to “archival reference versions” of selected ICS courses.  Each review site provides access to self-study materials selected from recent versions of the course. Currently, only a subset of ICS courses have a corresponding review site, but our ultimate goal is to cover all courses in the ICS curriculum.</p>
-  </li>
-  <li>
-    <p><a href="ics-curriculum.html">ICS Curriculum</a> provides a graphical representation of the structure of the ICS curriculum for Undergraduate and Graduate level.</p>
-  </li>
-  <li>
-    <p><a href="course-browser.html">Course Relation</a> provides a detailed representation of ICS courses at the module-level and dependencies between courses at the module level.  Only ICS courses with Review Sites are included in this representation.</p>
-  </li>
-  <li>
-    <p><a href="suggestion-box.html">Suggestion Box</a> provides a way for you to participate in the development of this site.  Want to suggest materials for inclusion in a review site? Flag an error in a module?  Use the Suggestion Box to make your improvements known to the site administrators.</p>
-  </li>
-</ul>
-
-
+  </div>
 </div>
-
-
 
 <div class="footer-background">
 	<footer>
@@ -98,5 +100,6 @@
   		</div>
 	</footer>
 </div>
+
 </body>
 </html>

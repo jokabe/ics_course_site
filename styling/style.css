@@ -34,6 +34,32 @@ p.prereq {
     border-color: #6ebfd4;
 }
 
+.btn-green {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    important!
+}
+
+/* For the panels located in the index.html page */
+@media (min-width: 500px) {
+  .col-md-4 > .panel > .panel-body {
+    min-height: 100px;
+  }
+}
+
+/* For the panel header color in the index.html page */
+.success-header {
+  color: #28a745;
+  !important
+}
+
+/* For the panel header color in the index.html page */
+.warning-header {
+  color: #ff6707;
+  !important
+}
+
 .footer-background {
     background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
     border-bottom: 1px solid #6ebfd4;
