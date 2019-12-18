@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Syllabus | ICS111 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../styling/style.css">
+  <link rel="shortcut icon" href="../../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../../styling/jquery.min.js"></script>
+  <script src="../../../styling/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../ics111-modules.html">Modules</a></li>
+        <li><a href="../ics111-outcomes.html">Outcomes</a></li>
+        <li><a href="../ics111-readings.html">Readings</a></li>
+        <li><a href="../ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../../review-sites.html">Review Sites</a></li>
+      <li><a href="../ICS111.html">Home</a></li>
+      <li><a href="../ics111-modules.html">Modules</a></li>
+      <li><a href="../modules/java-environment.html">Java Environment</a></li>
+      <li class="active">E01: Environment Configuration</li>
+    </ol>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="e01-environment-configuration">E01: Environment configuration</h1>
+
+  <p>For ICS 111 and the rest of your ICS career it is highly recommended that you set up a good software development environment. In this experience you will begin the process of creating a high quality software engineering environment on your computer.</p>
+
+  <p>This is an optional experience.</p>
+
+  <h2 id="task-1-have-appropriate-hardware">Task 1: Have appropriate hardware</h2>
+
+  <p>Preferred hardware is a laptop with &gt;= 2 Ghz processor, &gt;= 2 GB RAM, &gt;= 20 GB free disk space, and wireless access. As noted in the lecture, a Dell Laptop satisfies these requirements for $500-$1000. Note that “netbooks” are not suited for professional software development: while more portable, their screens are too small and they generally have less RAM and slower CPUs.</p>
+
+  <h2 id="task-2-install-an-appropriate-operating-system">Task 2: Install an appropriate operating system</h2>
+
+  <p>An up to date release of Mac OS/X or a Linux-based OS are the preferred operating systems for this class. If you must use Windows, you should use the latest release.</p>
+
+  <p>If needed, I can sign you up for MSDNAA, which will provide you with a free copy of the latest Windows OS.</p>
+
+  <h2 id="task-3-install-java-8">Task 3: Install Java 8</h2>
+
+  <h3 id="determine-if-you-need-to-install-java-8">Determine if you need to install Java 8</h3>
+
+  <p>Most of the time, you will need to install a new version of Java for this course.  To see whether you will need to do so, open a command shell and type <code class="highlighter-rouge">java -version</code>:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>$ java -version
+  java version "1.8.0_05"
+  Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.5-b02, mixed mode)
+</code></pre>
+  </div>
+
+  <h3 id="install-the-java-jdk">Install the Java JDK</h3>
+
+  <p>If the ‘java’ command does not work, or if the version is not 1.8, then you will need to install a new version of Java JDK following the directions at the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SDK Downloads Page</a>.</p>
+
+  <p>You must download and install the <strong>JDK</strong> version of Java, not just the JRE.</p>
+
+  <h3 id="verify-javahome">Verify JAVA_HOME</h3>
+
+  <p>In addition to the <code class="highlighter-rouge">java -version</code> command working properly, you must also make sure that the JAVA_HOME environment variable is set correctly.</p>
+
+  <p>On Unix machines (Linux, Mac), you can check as follows:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>$ printenv | grep JAVA_HOME
+  JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+</code></pre>
+  </div>
+
+  <p>This output indicates that the JAVA_HOME environment variable is set and it is set to the Java 8 installation.</p>
+
+  <p>On Windows, you can type <code class="highlighter-rouge">set</code> to see the list of all environment variables.</p>
+
+  <h3 id="switch-between-versions-of-java-optional">Switch between versions of Java (optional)</h3>
+
+  <p>Some of you might need to switch back and forth among different versions of Java. For example, you might need to use Java 8 for this course and Java 7 for your research project (because, for example, it requires a library that only runs on Java 7).</p>
+
+  <p>There are a variety of ways to switch between Java versions:</p>
+
+  <ul>
+    <li>For Mac users, see <a href="http://superuser.com/questions/490425/how-do-i-switch-between-java-7-and-java-6-on-os-x-10-8-2">this post</a>, or use the <a href="http://www.jenv.be/">jEnv</a> environment.</li>
+    <li>For Windows users, see <a href="https://blogs.oracle.com/pranav/entry/switch_between_different_jdk_v">this post</a>.</li>
+  </ul>
+
+  <h2 id="task-4-install-the-eclipse-ide-integrated-development-environment">Task 4: Install the Eclipse IDE (Integrated Development Environment)</h2>
+
+  <p>You can program in Java just using a text editor and the Java compiler and virtual machine. Please don’t. Modern IDEs make you a vastly more productive developer. There are many popular IDEs available:</p>
+
+  <ul>
+    <li>Eclipse</li>
+    <li>jGRASP</li>
+    <li>Netbeans</li>
+    <li>IntelliJ IDEA</li>
+    <li>Visual Studio</li>
+  </ul>
+
+  <p>We are going to use Eclipse as our IDE. <a href="http://www.eclipse.org/downloads/">Download the Eclipse installer</a> and install it on your computer.  Follow the <a href="http://help.eclipse.org/mars/index.jsp?nav=%2F0">Getting Started with the Eclipse Workbench</a> and <a href="http://help.eclipse.org/mars/index.jsp?nav=%2F1">Getting Started with Java development</a> tutorials.</p>
+
+  <p>You can watch this quick screen cast of me installing Eclipse Mars.1.</p>
+
+  <div class="video-container">
+    <iframe class="video" src="http://www.youtube.com/embed/IKbACaJt6n0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <h2 id="submission-instructions">Submission Instructions</h2>
+
+  <p>To be completed by the time and date indicated on the Schedule page.</p>
+
+</div>
+
+<div class="footer-background">
+  <footer>
+    <div class="container page-footer">
+
+
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
+
+    </div>
+  </footer>
+</div>
+</body>
+</html>

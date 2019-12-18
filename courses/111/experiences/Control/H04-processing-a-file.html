@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Syllabus | ICS111 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../styling/style.css">
+  <link rel="shortcut icon" href="../../../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../../../styling/jquery.min.js"></script>
+  <script src="../../../../styling/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../../ics111-modules.html">Modules</a></li>
+        <li><a href="../../ics111-outcomes.html">Outcomes</a></li>
+        <li><a href="../../ics111-readings.html">Readings</a></li>
+        <li><a href="../../ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../../../review-sites.html">Review Sites</a></li>
+      <li><a href="../../ICS111.html">Home</a></li>
+      <li><a href="../../ics111-modules.html">Modules</a></li>
+      <li><a href="../../modules/control.html">Control</a></li>
+      <li class="active">H04: Processing a file</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <h1 id="ics-111-homework-assignment-h04-processing-a-file">ICS 111 Homework Assignment H04: Processing a file</h1>
+
+  <p>Suppose that a file contains visitor information about visitors to Hawaii from various countries. Each line of the file contains a country name, followed by a colon (:) followed by the number of visitors for that country, followed by a colon (:), followed by the dollars spent by the visitors. The number of visitors is a number of type <strong>int</strong>. The dollars spent is a number of type <strong>double</strong>. However, for some countries, no data was available. In these lines, the data is replaced by a comment explaining why the data is missing. For example, several lines from the file might look like:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>Canada: 135132: 140020521.00
+Bulgaria: no report received
+Mexico: 200123: 98298734.12
+</code></pre>
+  </div>
+
+  <p>Write a program that will compute and print the total visitors from all the countries together and their average spending.</p>
+
+  <p>The program should also report the number of countries for which data was not available. The name of the file is “visitors.dat”. To complete this program, you’ll need one fact about file input with TextIO that was not covered in Subsection 2.4.4. Since you don’t know in advance how many lines there are in the file, you need a way to tell when you have gotten to the end of the file. When TextIO is reading from a file, the function TextIO.eof() can be used to test for end of file. This boolean-valued function returns true if the file has been entirely read and returns false if there is more data to read in the file. This means that you can read the lines of the file in a loop <strong>while (TextIO.eof() == false)…</strong>. The loop will end when all the lines of the file have been read.</p>
+
+  <p>You can download an example <a href="visitors.dat">visitors.dat</a> file to test your code.  You sould create your own files for testing.</p>
+
+  <p><strong>Suggestion:</strong> For each line, read and ignore characters up to the first colon. Then read the characters up to the second colon into a variable of type String. Try to convert the string into a number, and use <strong>try..catch</strong> to test whether the conversion succeeds. Do the same for the characters after the second colon.</p>
+
+  <h2 id="turning-in-the-assignment">Turning in the Assignment</h2>
+
+  <p>The assignment is due on Friday at 11:55pm. You may turn it in early.</p>
+
+  <ol>
+    <li>
+      <p>Conduct a personal review of your code before turning it in. Does your code follow the <a href="../references/reading-java-coding-standard.html">Java Coding Standard</a>?</p>
+
+      <p>Is it clear and well commented?</p>
+    </li>
+    <li>
+      <p>Test your code.</p>
+
+      <ul>
+        <li>Does it produce the correct output? Calculate the values by hand then check to see if it gets the math right.</li>
+      </ul>
+    </li>
+    <li>
+      <p>Sign into Laulima, then navigate to the ICS111 site. In the left hand side of the site, there is an Assignments tab/link.  Click on it and view all of the posted assignments. Select the assignment that you want to turn in and attach your files and accept the honor pledge to submit the assignment.</p>
+    </li>
+  </ol>
+
+
+</div>
+
+
+<div class="footer-background">
+  <footer>
+    <div class="container page-footer">
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
+
+    </div>
+  </footer>
+</div>
+</body>
+</html>

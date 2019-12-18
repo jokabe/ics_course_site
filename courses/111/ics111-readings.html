@@ -2,9 +2,771 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Readings</title>
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../styling/style.css">
+  <link rel="shortcut icon" href="../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../styling/jquery.min.js"></script>
+  <script src="../../styling/bootstrap.min.js"></script>
+
 </head>
-<body>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="./ics111-modules.html">Modules</a></li>
+        <li><a href="./ics111-outcomes.html">Outcomes</a></li>
+        <li class="active"><a href="./ics111-readings.html">Readings</a></li>
+        <li><a href="./ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../review-sites.html">Review Sites</a></li>
+      <li><a href="ICS111.html">Home</a></li>
+      <li class="active">Readings</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Readings and other resources <small>in module order</small></h1>
+</div>
+
+<div class="container">
+  <p>This page collects together all of the “readings” associated with individual modules.</p>
+
+  <p>In this site, readings represent “passive” learning opportunities, as opposed to experiences, which represent “active” learning opportunities.  In many courses, readings and experiences together constitute the “assignments”.</p>
+
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-introduction/index.html">Introduction to ICS 111</a></h2>
+
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/010.introduction/reading-screencast-guided-tour-website.html" class="thumbnail modules">
+          <h4>Guided tour of Morea course websites</h4>
+          <p>How to use this website to succeed in ICS 111</p>
+
+          <p>
+
+            <span class="badge">Screencast</span>
+
+            <span class="badge">4 min</span>
+
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/010.introduction/reading-weekly-flow.html" class="thumbnail modules">
+          <h4>ICS 111 Flow</h4>
+          <p>Weekly work flow.</p>
+          <p>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/010.introduction/sc-history.html" class="thumbnail modules">
+          <h4>SC: Brief History of Computing</h4>
+          <p>Brief incomplete history of computing</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">12 min</span>
+
+          </p>
+        </a>
+      </div>
+
+    </div><div class="row">
+
+
+  </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-computer-fundamentals/index.html">Computer Fundamentals</a></h2>
+
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/020.computer-fundamentals/reading-text-1.html" class="thumbnail modules">
+          <h4>Text: Ch. 1, The Mental Landscape</h4>
+          <p>Introduction to Computers, Languages and Java</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/020.computer-fundamentals/sc-computer-fundamentals.html" class="thumbnail modules">
+          <h4>SC: Computer Fundamentals</h4>
+          <p>Brief introduction to computers</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">33 min</span>
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-java-environment/index.html">Java Environment</a></h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/references/reading-java-coding-standard.html" class="thumbnail modules">
+          <h4>Java Coding Standard</h4>
+          <p>Java Coding Standard</p>
+          <p>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/030.java-environment/reading-eclipse-configuration.html" class="thumbnail modules">
+          <h4>Eclipse configuration guide</h4>
+          <p>Installation, the ICS-111 formatter, Checkstyle, editor configuration</p>
+          <p>
+            <span class="badge">Optional</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/030.java-environment/sc-setup-eclipse-1.html" class="thumbnail modules">
+          <h4>Setting up Eclipse for ICS 111</h4>
+          <p>Quick guide for setting up Eclipse</p>
+          <p>
+            <span class="badge">Optional</span>
+            <span class="badge">Screencast</span>
+            <span class="badge">7:30 min</span>
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-names-things/index.html">Names and Things</a></h2>
+
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/040.names-things/reading-text-21-23.html" class="thumbnail modules">
+          <h4>Text: Ch. 2.1 - 2.3, Names and Things</h4>
+          <p>Section 2.1 - 2.3</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/040.names-things/sc-21-23.html" class="thumbnail modules">
+          <h4>SC: Ch. 2.1 - 2.3</h4>
+          <p>Basics of Java programming</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">34 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/040.names-things/sc-programming-algorithm.html" class="thumbnail modules">
+          <h4>SC: Algorithm for Programming</h4>
+          <p>A simple algorithm for creating Java programs in ICS111.</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">5:30 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/references/programming-algorithm.html" class="thumbnail modules">
+          <h4>ICS 111 Programming Algorithm</h4>
+          <p>A quick algorithm for writing simple Java programs.</p>
+          <p>
+          </p>
+        </a>
+      </div>
+    </div><div class="row">
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/040.names-things/reading-text-24-26.html" class="thumbnail modules">
+        <h4>Text: Ch. 2.4 - 2.6 Names and Things</h4>
+        <p>Section 2.4 - 2.6</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/040.names-things/sc-24-26.html" class="thumbnail modules">
+        <h4>SC: Ch. 2.4 - 2.6</h4>
+        <p>Text IO, expressions, and programming environments</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">25 min</span>
+        </p>
+      </a>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-control/index.html">Control</a></h2>
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/050.control/reading-text-31-32.html" class="thumbnail modules">
+          <h4>Text: Ch. 3.1 - 3.2, Control</h4>
+          <p>Blocks, Loops and Branches</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/050.control/sc-31-32.html" class="thumbnail modules">
+          <h4>SC: Ch. 3.1 - 3.2</h4>
+          <p>Blocks, Loops, and Branches</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">15 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/050.control/reading-text-33-34.html" class="thumbnail modules">
+          <h4>Text: Ch. 3.3 - 3.4, Control</h4>
+          <p>Loops</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/050.control/sc-33-34.html" class="thumbnail modules">
+          <h4>SC: Ch. 3.3 - 3.4</h4>
+          <p>Loops</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">10 min</span>
+          </p>
+        </a>
+      </div>
+
+    </div><div class="row">
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/050.control/reading-text-35-36.html" class="thumbnail modules">
+        <h4>Text: Ch. 3.5 - 3.6, Control</h4>
+        <p>Branches</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/050.control/sc-35-36.html" class="thumbnail modules">
+        <h4>SC: Ch. 3.5 - 3.6</h4>
+        <p>Branches</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">11:23 min</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/050.control/reading-text-37-39.html" class="thumbnail modules">
+        <h4>Text: Ch. 3.7 - 3.9, Control</h4>
+        <p>Exceptions, Arrays, GUI Programming</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/050.control/sc-37-39.html" class="thumbnail modules">
+        <h4>SC: Ch. 3.7 - 3.9</h4>
+        <p>Exceptions, Arrays, GUI Programming</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">17 min</span>
+        </p>
+      </a>
+    </div>
+  </div><div class="row">
+
+
+
+
+  </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-subroutines/index.html">Subroutines</a></h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/reading-text-41-42.html" class="thumbnail modules">
+          <h4>Text: Ch. 4.1 - 4.2, Subroutines</h4>
+          <p>Black Boxes and Static Subroutines</p>
+
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/sc-41-42.html" class="thumbnail modules">
+          <h4>SC: Ch. 4.1 - 4.2</h4>
+          <p>Black Boxes and Static Subroutines</p>
+
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">18 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/reading-text-43-44.html" class="thumbnail modules">
+          <h4>Text: Ch. 4.3 - 4.4, Subroutines</h4>
+          <p>Parameters and Return Values</p>
+
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/sc-43-44.html" class="thumbnail modules">
+          <h4>SC: Ch. 4.3 - 4.4</h4>
+          <p>Parameters and Return Values</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">27 min</span>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/reading-text-45-47.html" class="thumbnail modules">
+          <h4>Text: Ch. 4.5 - 4.7, Subroutines</h4>
+          <p>APIs and Program Design</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/060.subroutines/sc-45-47.html" class="thumbnail modules">
+          <h4>SC: Ch. 4.5 - 4.7</h4>
+          <p>APIs and Program Design</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">23 min</span>
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-objects-classes/index.html">Objects and Classes</a></h2>
+
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/070.objects-classes/reading-text-51-52.html" class="thumbnail modules">
+          <h4>Text: Ch. 5.1 - 5.2, Objects and Classes</h4>
+          <p>Objects, Instance Methods and Constructors</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/070.objects-classes/sc-51-52.html" class="thumbnail modules">
+          <h4>SC: Ch. 5.1 - 5.2</h4>
+          <p>Objects, Instance Methods and Constructors</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">23 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/070.objects-classes/reading-text-53-54.html" class="thumbnail modules">
+          <h4>Text: Ch. 5.3 - 5.4, Objects and Classes</h4>
+          <p>Programming with Objects</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/070.objects-classes/sc-53-54.html" class="thumbnail modules">
+          <h4>SC: Ch. 5.3 - 5.4</h4>
+          <p>Programming with Objects</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">15 min</span>
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/070.objects-classes/reading-text-55-56.html" class="thumbnail modules">
+        <h4>Text: Ch. 5.5 - 5.6, Objects and Classes</h4>
+        <p>Inheritance and Polymorphism</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/070.objects-classes/sc-55-56.html" class="thumbnail modules">
+        <h4>SC: Ch. 5.5 - 5.6</h4>
+        <p>Inheritance and Polymorphism</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">23 min</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/070.objects-classes/reading-text-57-58.html" class="thumbnail modules">
+        <h4>Text: Ch. 5.7 - 5.8, Objects and Classes</h4>
+        <p>Interfaces and Nested Classes</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/070.objects-classes/sc-57-58.html" class="thumbnail modules">
+        <h4>SC: Ch. 5.7 - 5.8</h4>
+        <p>Interfaces and Nested Classes</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">13:30 min</span>
+        </p>
+      </a>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-gui/index.html">Introduction to GUI programming</a></h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/080.gui/reading-text-61-62.html" class="thumbnail modules">
+          <h4>Text: Ch. 6.1 - 6.2, Introduction to GUI Programming</h4>
+          <p>The Basic GUI Application</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/080.gui/sc-61-62.html" class="thumbnail modules">
+          <h4>SC: Ch. 6.1 - 6.2</h4>
+          <p>The Basic GUI Application</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">21 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/080.gui/reading-text-63-64.html" class="thumbnail modules">
+          <h4>Text: Ch. 6.3 - 6.4, Introduction to GUI Programming</h4>
+          <p>Events, Timers, and State Machines</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/080.gui/sc-63-64.html" class="thumbnail modules">
+          <h4>SC: Ch. 6.3 - 6.4</h4>
+          <p>Events and Timers</p>
+
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">14 min</span>
+          </p>
+        </a>
+      </div>
+    </div><div class="row">
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/080.gui/reading-text-65-66.html" class="thumbnail modules">
+        <h4>Text: Ch. 6.5 - 6.6, Introduction to GUI Programming</h4>
+        <p>Basic Components and Layout</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/080.gui/sc-65-66.html" class="thumbnail modules">
+        <h4>SC: Ch. 6.5 - 6.6</h4>
+        <p>Basic Components and Layout</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">25 min</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/080.gui/reading-text-67.html" class="thumbnail modules">
+        <h4>Text: Ch. 6.7, Introduction to GUI Programming</h4>
+        <p>Menus and Dialogs</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/080.gui/sc-67.html" class="thumbnail modules">
+        <h4>SC: Ch. 6.7</h4>
+        <p>Menus and Dialogs</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">13 min</span>
+        </p>
+      </a>
+    </div>
+  </div><div class="row">
+  </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-arrays-arraylists/index.html">Arrays and ArrayLists</a></h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/090.arrays-arraylists/reading-text-71.html" class="thumbnail modules">
+          <h4>Text: Ch. 7.1, Arrays and ArrayLists</h4>
+          <p>Array Details</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/090.arrays-arraylists/sc-71.html" class="thumbnail modules">
+          <h4>SC: Ch. 7.1</h4>
+          <p>Array Details</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">10 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/090.arrays-arraylists/sc-dynamic-array1.html" class="thumbnail modules">
+          <h4>SC: Creating the DynamicArrayOfStrings class.</h4>
+          <p>Quick screen cast of me creating the DynamicArrayOfStrings class.</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">4 min</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/090.arrays-arraylists/reading-text-72-73.html" class="thumbnail modules">
+          <h4>Text: Ch. 7.2 - 7.3, Arrays and ArrayLists</h4>
+          <p>Array Processing and ArrayLists</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+    </div><div class="row">
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/090.arrays-arraylists/sc-72-73.html" class="thumbnail modules">
+        <h4>SC: Ch. 7.2 - 7.3</h4>
+        <p>Array Processing and ArrayLists</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">16 min</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/090.arrays-arraylists/reading-text-74.html" class="thumbnail modules">
+        <h4>Text: Ch. 7.4, Arrays and ArrayLists</h4>
+        <p>Searching and Sorting</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/090.arrays-arraylists/sc-74.html" class="thumbnail modules">
+        <h4>SC: Ch. 7.4</h4>
+        <p>Searching and Sorting</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">22 min</span>
+        </p>
+      </a>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/090.arrays-arraylists/reading-text-75.html" class="thumbnail modules">
+        <h4>Text: Ch. 7.5, Arrays and ArrayLists</h4>
+        <p>Two Dimensional Arrays</p>
+        <p>
+          <span class="badge">Textbook</span>
+        </p>
+      </a>
+    </div>
+
+  </div><div class="row">
+
+    <div class="col-sm-3">
+      <a href="/ReviewICS111/morea/090.arrays-arraylists/sc-75.html" class="thumbnail modules">
+        <h4>SC: Ch. 7.5</h4>
+        <p>Two Dimensional Arrays</p>
+        <p>
+          <span class="badge">Screencast</span>
+          <span class="badge">15 min</span>
+        </p>
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ReviewICS111/modules/module-recursion/index.html">Recursion</a></h2>
+    <div class="row">
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/100.recursion/reading-text-91.html" class="thumbnail modules">
+          <h4>Text: Ch. 9.1, Linked Data Structures and Recursion</h4>
+          <p>Recursion</p>
+          <p>
+            <span class="badge">Textbook</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="/ReviewICS111/morea/100.recursion/sc-91.html" class="thumbnail modules">
+          <h4>SC: Ch. 9.1</h4>
+          <p>Recursion</p>
+          <p>
+            <span class="badge">Screencast</span>
+            <span class="badge">21 min</span>
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-background hidden-print">
+  <footer>
+    <div class="container page-footer">
+
+      <p>Carleton (Cam) Moore | Information and Computer Sciences | University of Hawaii, Manoa <br>
+        cmoore@hawaii.edu<br></p>
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-05-05 09:45:23 -1000</span></p>
+
+      <p style="margin: 0">
+        10 modules
+        | 16 outcomes
+        | 77 readings
+        | 80 experiences
+      </p>
+    </div>
+  </footer>
+</div>
+
 
 </body>
 </html>

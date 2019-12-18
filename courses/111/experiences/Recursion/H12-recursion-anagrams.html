@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Syllabus | ICS111 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../styling/style.css">
+  <link rel="shortcut icon" href="../../../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../../../styling/jquery.min.js"></script>
+  <script src="../../../../styling/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../../ics111-modules.html">Modules</a></li>
+        <li><a href="../../ics111-outcomes.html">Outcomes</a></li>
+        <li><a href="../../ics111-readings.html">Readings</a></li>
+        <li><a href="../../ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../../../review-sites.html">Review Sites</a></li>
+      <li><a href="../../ICS111.html">Home</a></li>
+      <li><a href="../../ics111-modules.html">Modules</a></li>
+      <li><a href="../../modules/recursion.html">Recursion</a></li>
+      <li class="active">H12: Recursion, Anagrams</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <h1 id="ics-111-homework-assignment-h12-recursion-anagrams">ICS 111 Homework Assignment H12: Recursion, Anagrams</h1>
+
+  <p>Write a program that lists all the rearrangements of a word entered by the user.</p>
+
+  <p>The program must have a recursive method</p>
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">printAnagrams</span><span class="o">(</span><span class="n">String</span> <span class="n">prefix</span><span class="o">,</span> <span class="n">String</span> <span class="n">word</span><span class="o">);</span></code></pre></div>
+
+  <p>The recursive printAnagrams algorithm looks something like.</p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">if</span> <span class="n">word</span> <span class="n">length</span> <span class="n">is</span> <span class="n">one</span>
+  <span class="n">Print</span> <span class="n">the</span> <span class="n">prefix</span> <span class="n">and</span> <span class="n">word</span>
+<span class="k">else</span>
+  <span class="n">For</span> <span class="n">each</span> <span class="n">letter</span> <span class="n">in</span> <span class="n">the</span> <span class="nl">word:</span>
+    <span class="n">Print</span> <span class="n">the</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">letter</span> <span class="n">followed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">rearrangements</span> <span class="n">of</span> <span class="n">the</span> <span class="n">word</span> <span class="n">without</span> <span class="n">the</span> <span class="n">letter</span><span class="o">.</span></code></pre></div>
+
+  <h2 id="turning-in-the-assignment">Turning in the Assignment</h2>
+
+  <p>The assignment is due on Wednesday May 4th at 11:55pm. You may turn it in early.</p>
+
+  <ol>
+    <li>
+      <p>Conduct a personal review of your code before turning it in. Does your code follow the <a href="../references/reading-java-coding-standard.html">Java Coding Standard</a>?</p>
+
+      <p>Is it clear and well commented?</p>
+    </li>
+    <li>
+      <p>Test your code.</p>
+
+      <ul>
+        <li>Does it produce the correct output?</li>
+      </ul>
+    </li>
+    <li>
+      <p>Sign into Laulima, then navigate to the ICS111 site. In the left hand side of the site, there is an Assignments tab/link.  Click on it and view all of the posted assignments. Select the assignment that you want to turn in and attach your files and accept the honor pledge to submit the assignment.</p>
+    </li>
+  </ol>
+
+
+</div>
+
+
+<div class="footer-background">
+  <footer>
+    <div class="container page-footer">
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
+
+    </div>
+  </footer>
+</div>
+</body>
+</html>
