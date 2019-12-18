@@ -96,6 +96,11 @@ p.prereq {
   }
 }
 
+.row-no-flex {
+  display: inline;
+  !important
+}
+
 /* For the panel header color in the index.html page */
 .success-header {
   color: #28a745;
@@ -137,7 +142,9 @@ p.prereq {
     border: 0px solid lightgray;
     background-color: #222222;
 
-}#bachelor-arts-network {
+}
+
+#bachelor-arts-network {
     width: 100%;
     height: 500px;
     border: 0px solid lightgray;
