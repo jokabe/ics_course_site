@@ -48,6 +48,7 @@ section {
   justify-content: space-between;
   max-height: 300px;
   min-height: 300px;
+  overflow: auto;
 }
 
 .thumbnail > .description {
