@@ -41,6 +41,17 @@ p.prereq {
     important!
 }
 
+.custom-pad {
+  padding-top: 51px;
+}
+
+/* Jumbotron image in index.html page */
+.jumbotron {
+  background-image: url("../img/jumbotron-image.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 /* For the panels located in the index.html page */
 @media (min-width: 500px) {
   .col-md-4 > .panel > .panel-body {
