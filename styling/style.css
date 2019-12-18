@@ -60,6 +60,25 @@ p.prereq {
   color: darkgreen;
 }
 
+/*Review Sites Modules Styling*/
+.thumbnail.modules {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 150px;
+  min-height: 150px;
+  overflow: auto;
+}
+
+.video {
+  width: 1100px;
+  height: 700px;
+}
+
+.section-background-1 {
+  background-color: #bce8f1;
+}
 
 /*Graph Network Styling*/
 #coursenetwork {

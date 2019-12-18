@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Syllabus | ICS111 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../styling/style.css">
+  <link rel="shortcut icon" href="../../../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../../../styling/jquery.min.js"></script>
+  <script src="../../../../styling/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../../ics111-modules.html">Modules</a></li>
+        <li><a href="../../ics111-outcomes.html">Outcomes</a></li>
+        <li><a href="../../ics111-readings.html">Readings</a></li>
+        <li><a href="../../ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../../../review-sites.html">Review Sites</a></li>
+      <li><a href="../../ICS111.html">Home</a></li>
+      <li><a href="../../ics111-modules.html">Modules</a></li>
+      <li><a href="../../modules/control.html">Control</a></li>
+      <li class="active">Practice: Branching</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <h1 id="practice-branching">Practice: Branching</h1>
+
+  <p><strong>Take out a piece of paper. We’ll be programming on paper.</strong></p>
+
+  <p><strong>For the following programming questions, I’d like you to follow the programming algorithm.</strong></p>
+
+  <p>1) Read and understand the problem</p>
+
+  <p>2) Create the comment stating the problem.</p>
+
+  <p>3) Insert the Java boilerplate.</p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/** Program that ...</span>
+<span class="cm"> * @author Cam Moore</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProgramName</span> <span class="o">{</span>
+  <span class="cm">/** Does something.</span>
+<span class="cm">   * @param args the command line arguments.</span>
+<span class="cm">   */</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+  <p>4) Write the steps in pseudo code.</p>
+
+  <p>5) Refine the pseudo code.</p>
+
+  <h3 id="problem-1">Problem 1</h3>
+
+  <p>Write a program that counts from 10 to 30 by three and outputs the number if it is a multiple of four.</p>
+
+  <h3 id="problem-2">Problem 2</h3>
+
+  <p>Write a program to play Jan Ken Po or Rock Paper Scissors.  The computer should choose a random value then ask the user to choose. Then print out who wins.</p>
+
+  <h3 id="problem-3">Problem 3</h3>
+
+  <p>Write a program that counts from 1 to 100, if the number is a multiple of 3 it should output “fizz”, if the number is a multiple of 5 it should output “buzz”.</p>
+
+  <h2 id="show-me-your-code-before-you-leave">Show me your code before you leave</h2>
+
+  <h3 id="practice-expressions">Practice Expressions</h3>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">+</span> <span class="o">(</span><span class="mi">20</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">+</span> <span class="mi">20</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">;</span>
+
+<span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="o">((</span><span class="mi">30</span> <span class="o">+</span> <span class="mi">20</span><span class="o">)</span> <span class="o">/</span> <span class="mi">5</span><span class="o">)</span> <span class="o">%</span> <span class="o">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span></code></pre></div>
+
+</div>
+
+
+<div class="footer-background">
+  <footer>
+    <div class="container page-footer">
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
+
+    </div>
+  </footer>
+</div>
+</body>
+</html>
