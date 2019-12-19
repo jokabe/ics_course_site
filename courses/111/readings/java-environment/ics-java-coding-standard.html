@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Introduction | Modules </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="../../../../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../styling/style.css">
+  <link rel="shortcut icon" href="../../../../styling/favicon.ico" type="image/x-icon" />
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="../../../../styling/jquery.min.js"></script>
+  <script src="../../../../styling/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../ICS111.html"> Review ICS 111 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../../ics111-modules.html">Modules</a></li>
+        <li><a href="../../ics111-outcomes.html">Outcomes</a></li>
+        <li><a href="../../ics111-experiences.html">Experiences</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-bar" style="background-color: #edf4fa; margin-top: -10px; height: 35px;">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="../../../../review-sites.html">Review Sites</a></li>
+      <li><a href="../../ICS111.html">Home</a></li>
+      <li><a href="../../ics111-modules.html">Modules</a></li>
+      <li><a href="../../modules/intro.html">Introduction to ICS 111</a></li>
+      <li class="active">ICS111 Flow</li>
+    </ol>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="ics-java-coding-standard">ICS Java Coding Standard</h1>
+
+  <h2 id="basic-coding-rules-to-follow">Basic Coding Rules to Follow</h2>
+
+  <ol>
+    <li>Use descriptive and appropriate names for all identifiers (variables, method names, class names, constants, etc.).</li>
+    <li>Comment confusing sections of code.</li>
+    <li>Be neat.</li>
+  </ol>
+
+  <h2 id="identifier-naming-and-capitalization">Identifier Naming and Capitalization</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Use descriptive names for all variables, function names, constants, and other identifiers. Use single letter identifiers only for the counter in loops.</li>
+    <li>Variable names start with lower case.</li>
+    <li>Multi-word identifiers are internally capitalized.</li>
+    <li>Do not use hyphens or underscores to separate multi-word identifiers (exception only for those who use speech recognition software).</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kt">float</span> <span class="n">sumOfSquares</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span></code></pre></div>
+
+  <p><strong>Counter Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kt">float</span> <span class="n">Sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>  <span class="c1">// Doesn't start with lower case letter</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">float</span> <span class="n">sumofsquares</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>  <span class="c1">// Not internally capitalized</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">float</span> <span class="n">sum_of_squares</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>  <span class="c1">// Uses underscores</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">float</span> <span class="n">qw</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>   <span class="c1">// Not descriptive, just adjacent characters.</span></code></pre></div>
+
+  <h2 id="comments-classes">Comments: Classes</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Every class should be preceded with a descriptive comment using the “JavaDoc” notational convention. The comment should name the class, describe its purpose, and name the author.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+<span class="cm"> * Haiku, prints a haiku.</span>
+<span class="cm"> * @author Suzuki, Susan</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Haiku</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span></code></pre></div>
+
+  <h2 id="comments-methods">Comments: Methods</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Every method should be preceded with a descriptive comment using the “JavaDoc” notational convention. The comment should name the method, describe its purpose, comment all arguments, the return value, and any exceptions using JavaDoc keywords. (Omit @return and @exception, if the return value is void or there are no exceptions thrown.)</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+<span class="cm"> * Attempts to print a word. Indicates whether printing was possible.</span>
+<span class="cm"> * @param word to print, must not contain spaces</span>
+<span class="cm"> * @return true if printer is available, false otherwise</span>
+<span class="cm"> * @exception SpacesFoundException if there are any spaces in the word</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">printWord</span><span class="o">(</span><span class="n">String</span> <span class="n">word</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SpacesFoundException</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span></code></pre></div>
+
+  <h2 id="comments-public-variables">Comments: Public variables</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Every public variable should be preceded with a descriptive comment using the “JavaDoc” notational convention. The comment should describe the purpose for the public variable.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/** Toggles between Frame and NoFrame mode. */</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="n">frameMode</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span></code></pre></div>
+
+  <h2 id="comments-in-line">Comments: In-line</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>In-line comments should be used to explain complicated sections of code, such as loops. Use the // comment delimiter for in-line comments. Do not comment generally known features of the java language.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Do a 3D transmogrification on the matrix.</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">values</span><span class="o">.</span><span class="na">transmogrify</span><span class="o">(</span><span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">],</span><span class="n">matrix</span><span class="o">[</span><span class="n">j</span><span class="o">],</span><span class="n">matrix</span><span class="o">[</span><span class="n">k</span><span class="o">]);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+  <p><strong>Counter Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">i</span><span class="o">++;</span> <span class="c1">// increments i</span>
+<span class="c1">// the variable "i" loops from 0 to the length of matrix</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span></code></pre></div>
+
+  <h2 id="spacing-between-lines">Spacing: Between lines</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Use one blank line to separate each method within a class definition. Use one blank line to separate logical sections of code within a method.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"World"</span><span class="o">);</span>
+<span class="o">}</span>
+
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span></code></pre></div>
+
+  <h2 id="spacing-within-lines">Spacing: Within lines</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Put a single space before every “{“.</li>
+    <li>Separate all operators such as “+” with a single space.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"World"</span><span class="o">);</span>
+<span class="o">}</span></code></pre></div>
+
+  <p><strong>Counter Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">){</span>  <span class="c1">// No space before '{'</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="s">"World"</span><span class="o">);</span>  <span class="c1">// No spaces around '+'</span>
+<span class="o">}</span></code></pre></div>
+
+  <h2 id="indentation">Indentation</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Indent two spaces when beginning a new block.</li>
+    <li>Open braces (i.e. “{“) do not start a new line.</li>
+    <li>Close braces (i.e. “}”) do start a new line, and are indented with the code they close.</li>
+    <li>Comments line up with the block they comment.</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">vals</span><span class="o">.</span><span class="na">insertElementAt</span><span class="o">(</span><span class="k">new</span> <span class="nf">Float</span> <span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]),</span> <span class="n">i</span><span class="o">);</span>
+  <span class="c1">// Transmogrify is incremental and more efficient inside the loop.</span>
+  <span class="n">vals</span><span class="o">.</span><span class="na">transmogrify</span><span class="o">();</span>
+<span class="o">}</span></code></pre></div>
+
+  <p><strong>Counter Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span>
+<span class="o">{</span>                                                  <span class="c1">// '{' on own line</span>
+  <span class="n">vals</span><span class="o">.</span><span class="na">insertElementAt</span><span class="o">(</span><span class="k">new</span> <span class="nf">Float</span> <span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]),</span> <span class="n">i</span><span class="o">);</span>
+<span class="c1">// Transmogrify is incremental and more efficient inside the loop.</span>
+  <span class="n">vals</span><span class="o">.</span><span class="na">transmogrify</span><span class="o">();</span>
+  <span class="o">}</span>                                                <span class="c1">// should not be indented, should align with 'for'</span></code></pre></div>
+
+  <h2 id="class-package-and-method-naming-and-capitalization">Class, Package, and Method Naming and Capitalization</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Classes begin with a capital letter.</li>
+    <li>Packages are all lower case.</li>
+    <li>Methods begin with a lower case letter.</li>
+    <li>Multi-word identifiers are internally capitalized in methods (CamelCase).</li>
+  </ul>
+
+  <p><strong>Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">foo</span><span class="o">.</span><span class="na">bar</span><span class="o">.</span><span class="na">baz</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MeanStandardDeviation</span>
+<span class="kd">private</span> <span class="n">Vector</span> <span class="nf">getNewVector</span><span class="o">(</span><span class="n">Vector</span> <span class="n">oldVector</span><span class="o">)</span> <span class="o">{</span></code></pre></div>
+
+  <p><strong>Counter Example</strong></p>
+
+  <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">Foo</span><span class="o">.</span><span class="na">Bar</span><span class="o">.</span><span class="na">Baz</span><span class="o">;</span>                             <span class="c1">// Packages not lower case</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Meanstandarddeviation</span>               <span class="c1">// Not internally capitalized</span>
+<span class="kd">private</span> <span class="n">Vector</span> <span class="nf">GetNewVector</span><span class="o">(</span><span class="n">Vector</span> <span class="n">oldVector</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">// First letter not lower case</span></code></pre></div>
+
+  <h2 id="program-modules">Program Modules</h2>
+
+  <p><strong>Guidelines</strong></p>
+
+  <ul>
+    <li>Lines of code should be kept short, generally less than 80 or 100 characters wide.</li>
+    <li>Each public class is contained in a separate file.</li>
+    <li>Each file has the name of the public class contained within it.</li>
+    <li>Avoid the use of the default package.</li>
+  </ul>
+
+  <h2 id="other-references">Other References</h2>
+
+  <p><strong>Website</strong></p>
+
+  <p><a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">How to Write Doc Comments for the Javadoc Tool</a></p>
+
+</div>
+
+
+<div class="footer-background">
+  <footer>
+    <div class="container page-footer">
+
+
+
+
+      <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: cerulean)<br>
+        Last update on: <span>2016-08-10 12:11:51 -1000</span></p>
+
+    </div>
+  </footer>
+</div>
+</body>
+</html>
