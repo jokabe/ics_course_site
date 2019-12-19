@@ -1,3 +1,6 @@
+/*
+    This file has been worked on by Mai Abe and Jun Okabe
+ */
 
 /*All Pages*/
 .navbar {
@@ -72,6 +75,10 @@ p.prereq {
   overflow: auto;
 }
 
+/*
+    Different Green Button from Bootstrap (in index.html page)
+    - Added by Jun Okabe
+ */
 .btn-green {
     color: #fff;
     background-color: #28a745;
@@ -79,44 +86,59 @@ p.prereq {
     !important;
 }
 
+/*
+    Add Padding at the top of the body in index.html page (prevent overlap)
+    - Added by Jun Okabe
+ */
 .custom-pad {
   padding-top: 51px;
 }
 
-/* Jumbotron image in index.html page */
+/*
+  Jumbotron image in index.html page
+  - Added by Jun Okabe
+*/
 .jumbotron {
   background-image: url("../img/jumbotron-image.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-/* For the panels located in the index.html page */
+/*
+  Force same height panels located in the index.html page
+  - Added by Jun Okabe
+*/
 @media (min-width: 500px) {
   .col-md-4 > .panel > .panel-body {
     min-height: 100px;
   }
 }
 
+/*
+  Force the panel in index.html to be full width at minimal window size
+  - Added by Jun Okabe
+*/
 .row-no-flex {
   display: inline;
   !important
 }
 
-/* For the panel header color in the index.html page */
+/*
+  For the green panel header color in the index.html page
+  - Added by Jun Okabe
+*/
 .success-header {
   color: #28a745;
   !important
 }
 
-/* For the panel header color in the index.html page */
+/*
+  For the orange panel header color in the index.html page
+  - Added by Jun Okabe
+*/
 .warning-header {
   color: #ff6707;
   !important
-}
-
-.footer-background {
-  background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
-  border-bottom: 1px solid #6ebfd4;
 }
 
 .video {
@@ -128,7 +150,10 @@ p.prereq {
   background-color: #bce8f1;
 }
 
-/*Graph Network Styling*/
+/*
+  Graph Network for the Course Relation Page
+  - Added by Jun Okabe
+*/
 #coursenetwork {
     width: 100%;
     height: 800px;
@@ -137,6 +162,10 @@ p.prereq {
     margin-bottom: 1%;
 }
 
+/*
+  Graph Network for the BS degree in the ICS Curriculum Page
+  - Added by Jun Okabe
+*/
 #bachelor-science-network {
     width: 100%;
     height: 500px;
@@ -145,6 +174,10 @@ p.prereq {
 
 }
 
+/*
+  Graph Network for the BS degree in the ICS Curriculum Page
+  - Added by Jun Okabe
+*/
 #bachelor-arts-network {
     width: 100%;
     height: 500px;
