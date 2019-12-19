@@ -186,11 +186,17 @@ p.prereq {
   !important
 }
 
+/*
+  - Added by Mai Abe
+*/
 .video {
   width: 1100px;
   height: 700px;
 }
 
+/*
+  - Added by Mai Abe
+*/
 .section-background-1 {
   background-color: #bce8f1;
 }
