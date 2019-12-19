@@ -2,20 +2,35 @@
     This file has been worked on by Mai Abe and Jun Okabe
  */
 
-/*All Pages*/
+/*
+  Change header color to be more inviting
+  - Added by Mai Abe
+*/
 .navbar {
     background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
     border-bottom: 1px solid #6ebfd4;
 }
 
+/*
+  Text Color
+  - Added by Mai Abe
+*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: steelblue;
 }
 
+/*
+  Text Color
+  - Added by Mai Abe
+*/
 a {
     color: steelblue;
 }
 
+/*
+  Button color matched with header and footer color
+  - Added by Mai Abe
+*/
 .btn-primary {
   color: #ffffff;
   background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
@@ -23,28 +38,47 @@ a {
   border-color: #6ebfd4;
 }
 
+/*
+  Footer background matched with header background
+  - Added by Mai Abe
+*/
 .footer-background {
   background-image: linear-gradient(#6ebfd4, #6ebfd4 70%, #00BDD3);
   border-bottom: 1px solid #6ebfd4;
 }
 
 
-/*Review Sites Styling*/
+/*
+  Breadcrumb active page styling for review page
+  - Added by Mai Abe
+*/
 .breadcrumb>.active {
   color: #555555;
 }
 
+/*
+  Align text and margin for sections (each course type)
+  - Added by Mai Abe
+*/
 section {
     margin-top: 50px;
     text-align: center;
 }
 
+/*
+  Make all rows flex containers for thumbnails
+  - Added by Mai Abe
+*/
 .row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
 }
 
+/*
+  Review Sites Styling for all thumbnails
+  - Added by Mai Abe
+*/
 .thumbnail {
   display: flex;
   flex-direction: column;
@@ -54,17 +88,28 @@ section {
   overflow: auto;
 }
 
+/*
+  Review Sites Styling for descriptions for each course
+  - Added by Mai Abe
+*/
 .thumbnail > .description {
   max-height: 150px;
   overflow: auto;
 }
 
+/*
+  Font color for prerequisite information
+  - Added by Mai Abe
+*/
 p.prereq {
   font-weight: bold;
   color: darkgreen;
 }
 
-/*Review Sites Modules Styling*/
+/*
+  Review Sites Modules Styling (for all thumbnails except for review sites page)
+  - Added by Mai Abe
+*/
 .thumbnail.modules {
   text-align: center;
   display: flex;
